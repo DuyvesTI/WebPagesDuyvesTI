@@ -32,8 +32,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check coverage output
+        id: check_coverage
+        run: |
+          if [ -d coverage ]; then
+            echo "coverage_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "coverage_exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Upload coverage
-        if: always()
+        if: steps.check_coverage.outputs.coverage_exists == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
