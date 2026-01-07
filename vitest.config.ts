@@ -6,7 +6,7 @@ export default defineConfig({
     globals: true,
     setupFiles: './test/setup.ts',
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       reporter: ['text', 'lcov'],
     },
   },
