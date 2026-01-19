@@ -1,8 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+import prettierConfig from "eslint-config-prettier";
+export default {
   reactCompiler: true,
 };
-
-export default nextConfig;
