@@ -1,11 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace;
+}
+
 :root {
+  /* Light Mode (Default) */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* Slate 900 */
+  --navy: #ffffff;
+  /* Navbar/Background becomes white */
+  --card-bg: #f1f5f9;
+  /* Slate 100 */
+
+  /* Brand Colors */
+  --orange: #ff5722;
+  --yellow: #ffc107;
+}
+
+[data-theme='dark'] {
+  /* Dark Mode */
   --background: #0a192f;
   --foreground: #ffffff;
   --navy: #0a192f;
-  --orange: #ff5722;
-  --yellow: #ffc107;
+  --card-bg: rgba(0, 0, 0, 0.2);
 }
 
 @theme inline {
@@ -14,7 +34,8 @@
   --color-brand-navy: var(--navy);
   --color-brand-orange: var(--orange);
   --color-brand-yellow: var(--yellow);
-  
+  --color-card-bg: var(--card-bg);
+
   /* Use system font stack to avoid network fetching during build */
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace;
