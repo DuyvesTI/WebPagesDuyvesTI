@@ -9,7 +9,10 @@ interface ThemeContextType {
     toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = ((globalThis as any).__ThemeContext as React.Context<ThemeContextType | undefined>) || createContext<ThemeContextType | undefined>(undefined);
+if (!(globalThis as any).__ThemeContext) {
+    (globalThis as any).__ThemeContext = ThemeContext;
+}
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState<Theme>('light');
@@ -43,9 +46,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
     const context = useContext(ThemeContext);
     if (context === undefined) {
-        // En Vercel a veces el SSG del not-found no envuelve el Context correctamente.
-        // Devolvemos un fallback para evitar que la compilación falle.
-        return { theme: 'light', toggleTheme: () => {} };
+        throw new Error('useTheme must be used within a ThemeProvider');
     }
     return context;
 }
