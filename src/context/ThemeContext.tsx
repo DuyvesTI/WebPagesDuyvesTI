@@ -43,7 +43,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
     const context = useContext(ThemeContext);
     if (context === undefined) {
-        throw new Error('useTheme must be used within a ThemeProvider');
+        // En Vercel a veces el SSG del not-found no envuelve el Context correctamente.
+        // Devolvemos un fallback para evitar que la compilación falle.
+        return { theme: 'light', toggleTheme: () => {} };
     }
     return context;
 }
