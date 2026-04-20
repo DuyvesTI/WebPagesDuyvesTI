@@ -1,9 +1,20 @@
 "use client";
 
 import { useTheme } from "@/context/ThemeContext";
+import { useState, useEffect } from "react";
 
 export default function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    // Evita el error de hidratación montando el componente solo en el cliente
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return <div className="w-10 h-10" aria-hidden="true" />; // Placeholder con el mismo tamaño aproximado
+    }
 
     return (
         <button
