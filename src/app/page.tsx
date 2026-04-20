@@ -1,11 +1,13 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Process from "@/components/Process";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col">
       <Hero />
       <Services />
+      <Process />
     </div>
   );
 }
