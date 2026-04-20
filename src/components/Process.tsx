@@ -37,8 +37,8 @@ export default function Process() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
-          <h2 className="text-sm font-bold tracking-widest text-[#FF6A13] uppercase mb-3 drop-shadow-sm">
-            EL MÉTODO DUYVESTI
+          <h2 className="text-sm font-bold tracking-widest uppercase mb-3 drop-shadow-sm">
+            <span className="text-[#FF6A13]">EL MÉTODO DUYVES</span><span className="text-foreground">TI</span>
           </h2>
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-6">
             Proceso de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Escalable</span>
