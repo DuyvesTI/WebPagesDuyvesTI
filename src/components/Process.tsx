@@ -24,9 +24,9 @@ export default function Process() {
     },
     {
       id: "04",
-      title: "Lanzamiento y Entrega Total",
+      title: "Lanzamiento y Puesta en Producción",
       description:
-        "Desplegamos tu proyecto con los más altos estándares de rendimiento. Te entregamos el control absoluto e irrestricto y el código fuente original. Eres 100% dueño de tu producto, nosotros cobramos solo por el desarrollo—nada de cuotas mensuales de amarre o 'letra chica'.",
+        "Nos encargamos de toda la configuración técnica para que tu web esté al aire. Conectamos tu dominio .CL, configuramos el alojamiento y desplegamos tu proyecto con los más altos estándares de rendimiento, para que no tengas que preocuparte de nada técnico.",
     },
   ];
 

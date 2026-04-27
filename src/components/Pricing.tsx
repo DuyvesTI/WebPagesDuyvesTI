@@ -16,7 +16,8 @@ export default function Pricing() {
         "Formulario de contacto funcional",
         "Botón de WhatsApp flotante",
         "Optimización SEO básica",
-        "100% de propiedad del código"
+        "Puesta en producción al aire",
+        "Configuración de Dominio .CL"
       ],
       cta: "Empezar proyecto",
       highlighted: false,
@@ -32,8 +33,8 @@ export default function Pricing() {
         "Dark / Light mode nativo",
         "SEO Técnico Avanzado",
         "Integración con Google Analytics",
-        "Soporte post-lanzamiento (30 días)",
-        "Código fuente y propiedad total"
+        "Despliegue y Puesta en Producción",
+        "Configuración Dominio .CL"
       ],
       cta: "El más elegido",
       highlighted: true,
@@ -49,8 +50,8 @@ export default function Pricing() {
         "Autenticación de Usuarios",
         "Conexión con APIs de terceros",
         "Pruebas de calidad automáticas",
-        "Despliegue en AWS o Vercel",
-        "Soporte continuo opcional"
+        "Puesta en producción y despliegue",
+        "Configuración Servidores y Dominio"
       ],
       cta: "Hablar con un experto",
       highlighted: false,

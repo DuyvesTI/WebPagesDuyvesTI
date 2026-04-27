@@ -14,6 +14,11 @@ export default function Services() {
             title: "SEO & Optimización",
             description: "Mejoramos la visibilidad de tu negocio en Google con prácticas de optimización de motores de búsqueda.",
             icon: "🔍"
+        },
+        {
+            title: "Puesta en Producción",
+            description: "Nos encargamos de toda la configuración, instalación y puesta al aire con tu dominio .CL. Te entregamos la web lista y funcionando en Internet.",
+            icon: "🚀"
         }
     ];
 
@@ -29,7 +34,7 @@ export default function Services() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
