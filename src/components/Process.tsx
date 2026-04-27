@@ -26,7 +26,7 @@ export default function Process() {
       id: "04",
       title: "Lanzamiento y Puesta en Producción",
       description:
-        "Nos encargamos de toda la configuración técnica para que tu web esté al aire. Conectamos tu propio dominio, configuramos el alojamiento y desplegamos tu proyecto con los más altos estándares de rendimiento, para que no tengas que preocuparte de nada técnico.",
+        "Nos encargamos de toda la configuración técnica para que tu web esté al aire. Conectamos tu dominio, configuramos el alojamiento y desplegamos tu proyecto con los más altos estándares de rendimiento, para que no tengas que preocuparte de nada técnico.",
     },
   ];
 
