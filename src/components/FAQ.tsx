@@ -8,7 +8,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "¿En qué se diferencian de otras agencias tradicionales o de bajo costo?",
-      answer: "A diferencia de las agencias que utilizan constructores visuales lentos o plantillas genéricas (como Elementor o WordPress básico), nosotros desarrollamos con código moderno a medida (Next.js y React). Esto resulta en páginas ultra-rápidas, con un diseño premium exclusivo (sin limitaciones creativas) y preparadas para posicionar en Google.",
+      answer: "A diferencia de las agencias que usan plantillas repetidas y lentas, nosotros creamos tu página desde cero. Esto significa que tu sitio web cargará al instante, tendrá un diseño único pensado para tus clientes y estará listo para ganar los primeros lugares en Google.",
     },
     {
       question: "¿Se pagan mensualidades por la página web?",
@@ -20,7 +20,7 @@ export default function FAQ() {
     },
     {
       question: "¿Mi página estará optimizada para SEO (Google)?",
-      answer: "Sí, todos los desarrollos incluyen SEO técnico desde el primer día: código semántico, tiempos de carga instantáneos, etiquetas meta jerárquicas y arquitectura optimizada. Next.js es el estándar de la industria mundial para posicionamiento ya que procesa la web antes de enviarla a tu cliente.",
+      answer: "Sí, todas nuestras páginas están preparadas para aparecer en Google desde el primer día. Cuidamos todos los detalles técnicos y de velocidad para que los motores de búsqueda le den preferencia a tu negocio sobre tu competencia.",
     },
     {
       question: "¿Ofrecen soporte luego de terminar el sitio?",

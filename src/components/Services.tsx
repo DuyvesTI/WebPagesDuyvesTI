@@ -7,11 +7,11 @@ export default function Services() {
         },
         {
             title: "Desarrollo a Medida",
-            description: "Soluciones personalizadas construidas con tecnologías modernas como Next.js y React para máximo rendimiento.",
+            description: "Páginas súper rápidas y seguras, construidas a tu medida para que nunca fallen cuando tus clientes te necesiten.",
             icon: "⚡"
         },
         {
-            title: "SEO & Optimización",
+            title: "Visibilidad en Google (SEO)",
             description: "Mejoramos la visibilidad de tu negocio en Google con prácticas de optimización de motores de búsqueda.",
             icon: "🔍"
         },

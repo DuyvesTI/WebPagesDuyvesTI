@@ -8,19 +8,19 @@ export default function Process() {
       id: "01",
       title: "Descubrimiento & Estrategia",
       description:
-        "Analizamos a fondo tu negocio, tus competidores y tus clientes ideales. Definimos una arquitectura de información óptima centrada en la conversión y en el crecimiento a largo plazo, sin dejar nada al azar.",
+        "Analizamos a fondo tu negocio, tus competidores y tus clientes ideales. Organizamos la información de tu empresa de forma estratégica para que tus clientes encuentren lo que buscan rápido y se comuniquen contigo, sin dejar nada al azar.",
     },
     {
       id: "02",
-      title: "Diseño de Interfaz Premium (UI/UX)",
+      title: "Diseño Visual Atractivo",
       description:
-        "Desarrollamos interfaces hechas a medida (nada de plantillas prefabricadas). Cada detalle tipográfico, paleta de colores y animación sutil (micro-interacciones) está pensado para posicionarte como el líder de tu industria y transmitir confianza absoluta.",
+        "Desarrollamos interfaces hechas a medida (nada de plantillas prefabricadas). Cuidamos cada detalle visual para que tu empresa transmita confianza y profesionalismo desde el primer segundo.",
     },
     {
       id: "03",
-      title: "Ingeniería y Desarrollo Avanzado",
+      title: "Desarrollo y Programación de Alta Calidad",
       description:
-        "A diferencia de las alternativas lentas y básicas, nosotros programamos desde cero usando React, Next.js y Tailwind CSS. El resultado es un producto digital altamente robusto, ultra-rápido, escalable y preparado estructuralmente para liderar en Google (SEO y Core Web Vitals).",
+        "A diferencia de las alternativas lentas, nosotros creamos tu página desde cero con tecnología moderna. Tu sitio web cargará rapidísimo, no se caerá y estará preparado desde su base para aparecer en los primeros lugares de Google.",
     },
     {
       id: "04",
@@ -41,10 +41,10 @@ export default function Process() {
             <span className="text-[#FF6A13]">EL MÉTODO DUYVES</span><span className="text-foreground">TI</span>
           </h2>
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-6">
-            Proceso de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Escalable</span>
+            Proceso de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Profesional</span>
           </h3>
           <p className="text-xl text-foreground/70">
-            No armamos páginas en sistemas básicos de un solo clic. Nuestra agencia ejecuta ingeniería de software real y diseño digital sofisticado para empresas.
+            No armamos páginas en sistemas básicos. Nuestra agencia ejecuta soluciones tecnológicas y diseño digital de primer nivel para empresas.
           </p>
         </div>
 

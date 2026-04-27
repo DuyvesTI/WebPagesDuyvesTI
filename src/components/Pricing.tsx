@@ -10,9 +10,9 @@ export default function Pricing() {
       description: "Ideal para campañas, portfolios o captación de leads con alto impacto visual.",
       features: [
         "One-Page (hasta 5 secciones)",
-        "Diseño UI/UX Personalizado",
+        "Diseño atractivo a tu medida",
         "Animaciones sutiles e interactivas",
-        "Desarrollo en React & Next.js",
+        "Página ultrarrápida y moderna",
         "Formulario de contacto funcional",
         "Botón de WhatsApp flotante",
         "Optimización SEO básica",
@@ -29,10 +29,10 @@ export default function Pricing() {
       features: [
         "Sitio Multi-página (hasta 6 páginas)",
         "Diseño Premium Exclusivo",
-        "Framework ultra-rápido (Next.js)",
-        "Dark / Light mode nativo",
-        "SEO Técnico Avanzado",
-        "Integración con Google Analytics",
+        "Sistema moderno de carga rápida",
+        "Modo oscuro y claro automático",
+        "Lista para destacar en Google (SEO)",
+        "Conexión con estadísticas de visitas",
         "Despliegue y Puesta en Producción",
         "Configuración de Dominio"
       ],
@@ -44,12 +44,12 @@ export default function Pricing() {
       price: "Cotizar",
       description: "Soluciones de software personalizadas, plataformas SaaS o e-commerce complejos.",
       features: [
-        "Arquitectura escalable a medida",
-        "Integración de Bases de Datos",
+        "Sistema preparado para crecer",
+        "Gestión de información de clientes",
         "Panel de Administración",
-        "Autenticación de Usuarios",
-        "Conexión con APIs de terceros",
-        "Pruebas de calidad automáticas",
+        "Ingreso seguro para tus usuarios",
+        "Conexión con otros sistemas (facturas, envíos)",
+        "Revisión exhaustiva sin errores",
         "Puesta en producción y despliegue",
         "Configuración Servidores y Dominio"
       ],
@@ -70,10 +70,10 @@ export default function Pricing() {
             Inversión Estratégica
           </h2>
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-6">
-            Planes de Ingeniería <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-400">Web</span>
+            Planes de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-400">Web</span>
           </h3>
           <p className="text-xl text-foreground/70">
-            No pagues mensualidades absurdas por sitios en comodato. Paga por desarrollo de alto calibre, y <strong>sé el único dueño de tu tecnología.</strong>
+            No pagues mensualidades por páginas arrendadas. Paga por un sitio profesional, y <strong>sé el único dueño de tu página web.</strong>
           </p>
         </div>
 
