@@ -17,7 +17,7 @@ export default function Services() {
         },
         {
             title: "Puesta en Producción",
-            description: "Nos encargamos de toda la configuración, instalación y puesta al aire con tu dominio .CL. Te entregamos la web lista y funcionando en Internet.",
+            description: "Nos encargamos de toda la configuración, instalación y puesta al aire con tu propio dominio. Te entregamos la web lista y funcionando en Internet.",
             icon: "🚀"
         }
     ];

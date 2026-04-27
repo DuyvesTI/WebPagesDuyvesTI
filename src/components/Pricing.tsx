@@ -17,7 +17,7 @@ export default function Pricing() {
         "Botón de WhatsApp flotante",
         "Optimización SEO básica",
         "Puesta en producción al aire",
-        "Configuración de Dominio .CL"
+        "Configuración de Dominio Propio"
       ],
       cta: "Empezar proyecto",
       highlighted: false,
@@ -34,7 +34,7 @@ export default function Pricing() {
         "SEO Técnico Avanzado",
         "Integración con Google Analytics",
         "Despliegue y Puesta en Producción",
-        "Configuración Dominio .CL"
+        "Configuración Dominio Propio"
       ],
       cta: "El más elegido",
       highlighted: true,
