@@ -81,3 +81,16 @@ npm run build
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## 🚀 Súper Tip SEO: Acelera tu aparición en Google
+
+Acabamos de implementar un sistema avanzado de SEO (Metadatos, Sitemap y Robots). Para sacarle el máximo provecho, una vez que la página esté en producción bajo tu dominio principal, sigue estos pasos:
+
+1. Ve a [Google Search Console](https://search.google.com/search-console).
+2. Registra tu dominio (ej: `https://tudominio.cl`).
+3. Ve a la sección **"Sitemaps"** en el menú lateral.
+4. Ingresa `https://tudominio.cl/sitemap.xml` y dale a **Enviar**.
+
+Esto "obligará" a Google a leer tu página inmediatamente y la agregará a sus resultados mucho más rápido que si esperamos a que la encuentre orgánicamente.
