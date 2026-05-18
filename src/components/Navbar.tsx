@@ -36,6 +36,9 @@ export default function Navbar() {
                             <Link href="#servicios" className="text-foreground/80 hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                 Servicios
                             </Link>
+                            <Link href="#portafolio" className="text-foreground/80 hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Portafolio
+                            </Link>
                             <Link href="#contacto" className="text-foreground/80 hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                 Contacto
                             </Link>
@@ -86,6 +89,13 @@ export default function Navbar() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Servicios
+                            </Link>
+                            <Link
+                                href="#portafolio"
+                                className="text-foreground/80 hover:text-foreground block px-3 py-2 rounded-md text-base font-medium"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Portafolio
                             </Link>
                             <Link
                                 href="#contacto"

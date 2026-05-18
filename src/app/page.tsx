@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
-// import Portfolio from "@/components/Portfolio";
+import Portfolio from "@/components/Portfolio";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Process />
-      {/* <Portfolio /> */}
+      <Portfolio />
       <Pricing />
       <FAQ />
     </div>
