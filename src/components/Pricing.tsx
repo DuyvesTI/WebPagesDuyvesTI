@@ -70,7 +70,7 @@ export default function Pricing() {
             Inversión Estratégica
           </h2>
           <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-6">
-            Planes de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-400">Web</span>
+            Planes de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Web</span>
           </h3>
           <p className="text-xl text-foreground/70">
             No pagues mensualidades por páginas arrendadas. Paga por un sitio profesional, y <strong>sé el único dueño de tu página web.</strong>

@@ -9,7 +9,7 @@ export default function Hero() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6">
-                    Desarrollo de <span className="text-brand-orange">Website</span>
+                    Desarrollo de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Website</span>
                 </h1>
                 <p className="mt-4 text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
                     Nuestros servicios de desarrollo web están listos para ayudarte a tener una <span className="text-foreground font-medium">presencia en línea profesional y atractiva</span>.

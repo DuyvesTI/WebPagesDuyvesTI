@@ -27,7 +27,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-                        Nuestros <span className="text-brand-orange">Servicios</span>
+                        Nuestros <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Servicios</span>
                     </h2>
                     <p className="text-foreground/60 max-w-2xl mx-auto">
                         Llevamos tu negocio al siguiente nivel con tecnología de punta y diseño centrado en el usuario.

@@ -3,27 +3,24 @@
 import React, { useState, useEffect } from "react";
 
 export default function Portfolio() {
-  // Estado para simular la consola del Migrador ADO -> Jira
+  // Estado para simular la consola del traspaso automático de datos
   const [consoleLogs, setConsoleLogs] = useState<string[]>([
-    "[ADO] Conectando a colección 'DefaultCollection'...",
+    "[Seguridad] Estableciendo conexión segura...",
   ]);
   const [logIndex, setLogIndex] = useState(0);
 
   const logsSequence = [
-    "[ADO] Conectando a colección 'DefaultCollection'...",
-    "[ADO] Conexión establecida con servidor local.",
-    "[Jira] Validando API Token en Jira Cloud... OK",
-    "[Jira] Acceso verificado para miguel.duy@cloud",
-    "[Migrador] Iniciando mapeo de estados...",
-    "[Migrador] 'Resolved' ➔ 'In Review' [Mapeado]",
-    "[Migrador] 'Active' ➔ 'In Progress' [Mapeado]",
-    "[Proceso] Migrando Work Item #124: 'Añadir pasarela de pago'",
-    "[Proceso] WI #124 importado exitosamente.",
-    "[Proceso] Migrando Work Item #125: 'Fix de seguridad en Auth'",
-    "[Proceso] WI #125 importado exitosamente con comentarios.",
-    "[Proceso] Sincronizando historial de adjuntos...",
-    "[Éxito] Migración completada: 148 items procesados.",
-    "[Consola] Esperando nuevos parámetros..."
+    "[Seguridad] Estableciendo conexión segura...",
+    "[Seguridad] Conexión protegida y establecida con éxito.",
+    "[Sistema] Leyendo tareas y documentos del software antiguo... OK",
+    "[Validación] Verificando permisos del usuario... Autorizado",
+    "[Proceso] Iniciando traspaso automático de información...",
+    "[Datos] Traspasando Tarea #124: 'Seguimiento de Clientes' ➔ Guardada",
+    "[Datos] Traspasando Factura #125: 'Presupuesto Anual' ➔ Guardada",
+    "[Datos] Migrando historial de comentarios y archivos adjuntos...",
+    "[Éxito] ¡Traspaso completado! 148 elementos procesados con total éxito.",
+    "[Consola] 100% de la información respaldada y lista en el nuevo sistema.",
+    "[Consola] Sistema en espera..."
   ];
 
   useEffect(() => {
@@ -63,18 +60,19 @@ export default function Portfolio() {
               Casos de Éxito
             </h2>
             <h3 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
-              Ingeniería y <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">Soluciones Reales</span>
+              Soluciones Inteligentes y <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">Resultados Reales</span>
             </h3>
           </div>
           <p className="text-lg text-foreground/60 max-w-md">
-            Desarrollamos soluciones tecnológicas complejas y de alta gama. Aquí tienes una muestra de sistemas de software reales que hemos diseñado y programado.
+            Creamos software y plataformas diseñadas para resolver problemas reales del día a día de las empresas. Mira algunos ejemplos prácticos de lo que podemos construir para ti.
           </p>
         </div>
 
+
         {/* Grid de Proyectos */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* TARJETA 1: Migrador ADO -> Jira */}
+          {/* TARJETA 1: Sincronización y Traspaso de Datos */}
           <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-blue-500/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(59,130,246,0.08)]">
             
             {/* Visualizador interactivo superior (Mini Consola y Flujo) */}
@@ -86,19 +84,19 @@ export default function Portfolio() {
                   <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
                   <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-                  <span className="text-[10px] text-foreground/40 ml-1.5">migrador_ado_jira.py</span>
+                  <span className="text-[10px] text-foreground/40 ml-1.5">traspaso_automatico.py</span>
                 </div>
                 <span className="text-[9px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold uppercase animate-pulse">
-                  MIGRANDO
+                  SINCRONIZANDO
                 </span>
               </div>
 
               {/* Diagrama de Flujo Visual */}
               <div className="flex items-center justify-center gap-4 py-3 bg-blue-950/20 rounded-lg border border-blue-500/10 mb-3 relative">
-                {/* Bloque ADO */}
+                {/* Bloque Izquierda */}
                 <div className="px-2 py-1 rounded bg-blue-900/40 border border-blue-400 text-center z-10 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                  <div className="font-bold text-[9px] text-white">Azure DevOps</div>
-                  <div className="text-[8px] text-blue-300">On-Premise</div>
+                  <div className="font-bold text-[9px] text-white">Sistema Antiguo</div>
+                  <div className="text-[8px] text-blue-300">Servidor Local</div>
                 </div>
 
                 {/* Línea de conexión animada */}
@@ -109,10 +107,10 @@ export default function Portfolio() {
                   }} />
                 </div>
 
-                {/* Bloque Jira */}
+                {/* Bloque Derecha */}
                 <div className="px-2 py-1 rounded bg-indigo-900/40 border border-indigo-400 text-center z-10 shadow-[0_0_10px_rgba(99,102,241,0.2)]">
-                  <div className="font-bold text-[9px] text-white">Jira Cloud</div>
-                  <div className="text-[8px] text-indigo-300">SaaS Atlassian</div>
+                  <div className="font-bold text-[9px] text-white">Sistema Moderno</div>
+                  <div className="text-[8px] text-indigo-300">Nube Protegida</div>
                 </div>
               </div>
 
@@ -134,19 +132,19 @@ export default function Portfolio() {
             <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-blue-500/10 text-blue-500 rounded-full mb-4">
-                  DevOps e Integración
+                  Automatización e Integración
                 </span>
                 <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-blue-500 transition-colors">
-                  Migrador ADO ➔ Jira Cloud
+                  Sincronización y Traspaso de Datos
                 </h4>
                 <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                  Software especializado para la migración automatizada de incidencias (Work Items) desde servidores locales de Azure DevOps hacia Jira Cloud. Resuelve de forma inteligente el mapeo de flujos, asignación de usuarios y resguardo de adjuntos e historial de comentarios.
+                  Diseñamos un sistema inteligente que traslada de forma automática miles de tareas, facturas, archivos e historiales de clientes desde software antiguos hacia plataformas modernas en la nube. Ahorró cientos de horas de digitación manual y evitó cualquier pérdida de información crítica.
                 </p>
               </div>
 
               {/* Tecnologías */}
               <div className="flex flex-wrap gap-1.5">
-                {["Python / Node", "API REST", "DevOps", "JSON Mapping"].map((tag, i) => (
+                {["Conexión de Sistemas", "Respaldo Seguro", "Ahorro de Tiempo", "100% Automático"].map((tag, i) => (
                   <span 
                     key={i} 
                     className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
@@ -202,7 +200,7 @@ export default function Portfolio() {
 
               {/* Overlay de información técnica */}
               <div className="absolute top-2 right-3 font-mono text-[9px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/20">
-                CV / OCR activo
+                IA / Protección de Datos
               </div>
             </div>
 
@@ -210,19 +208,19 @@ export default function Portfolio() {
             <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-emerald-500/10 text-emerald-500 rounded-full mb-4">
-                  Visión Artificial e IA
+                  Inteligencia Artificial y Seguridad
                 </span>
                 <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-emerald-500 transition-colors">
-                  RedactAI - Tachador de PDFs
+                  Protector de Datos Confidenciales
                 </h4>
                 <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                  Motor inteligente basado en visión computacional y OCR para la detección y tachado automático de datos sensibles (RUT, nombres, firmas) en documentos PDF. Diseñado para garantizar la privacidad de la información (PII) a gran escala.
+                  Desarrollamos una herramienta inteligente que "lee" contratos, facturas y PDFs escaneados para detectar y tachar automáticamente datos confidenciales (como nombres, documentos de identidad y firmas). Ideal para garantizar la privacidad y cumplir con la ley de protección de datos en segundos.
                 </p>
               </div>
 
               {/* Tecnologías */}
               <div className="flex flex-wrap gap-1.5">
-                {["Python", "OpenCV", "Tesseract OCR", "PyMuPDF"].map((tag, i) => (
+                {["Lectura Inteligente", "Seguridad Legal", "Privacidad", "Cumplimiento"].map((tag, i) => (
                   <span 
                     key={i} 
                     className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
@@ -234,7 +232,105 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* TARJETA 3: CTA - Tu proyecto a medida */}
+          {/* TARJETA 3: Plataforma Web DuyvesTI */}
+          <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-[#FF6A13]/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(255,106,19,0.08)]">
+            
+            {/* Visualizador interactivo superior (Mini Navegador / Esqueleto de la Web con Switcher) */}
+            <div className="relative h-64 bg-slate-950 flex flex-col items-center justify-center p-6 overflow-hidden border-b border-foreground/10">
+              
+              {/* Ventana de Navegador simulada */}
+              <div className="w-48 h-40 bg-slate-900 rounded-lg shadow-2xl border border-foreground/10 flex flex-col overflow-hidden relative select-none">
+                
+                {/* Barra de dirección de navegador */}
+                <div className="flex items-center gap-1 bg-slate-950 px-2 py-1 border-b border-foreground/5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500/80"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/80"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500/80"></span>
+                  <div className="flex-1 bg-slate-900 rounded px-1.5 py-0.5 text-[6px] text-foreground/40 text-center font-mono truncate ml-1.5">
+                    duyvesti.com
+                  </div>
+                </div>
+                
+                {/* Contenido simulado de la página */}
+                <div className="p-2.5 flex-1 flex flex-col justify-between relative bg-background transition-colors duration-1000">
+                  
+                  {/* Navbar simulado */}
+                  <div className="flex items-center justify-between border-b border-foreground/5 pb-1">
+                    <div className="flex items-center gap-0.5">
+                      <span className="w-2 h-2 rounded bg-[#FF6A13]" />
+                      <span className="text-[6px] font-extrabold text-foreground">DuyvesTI</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-1 bg-foreground/20 rounded-full" />
+                      <span className="w-2 h-1 bg-foreground/20 rounded-full" />
+                      {/* Botón de cambio de tema simulado */}
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FF6A13]/20 flex items-center justify-center text-[5px] text-[#FF6A13] animate-pulse">
+                        🌙
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hero simulado */}
+                  <div className="text-center py-1.5 flex-1 flex flex-col items-center justify-center gap-1">
+                    <div className="w-2/3 h-1.5 bg-gradient-to-r from-[#FF6A13] to-orange-300 rounded" />
+                    <div className="w-5/6 h-0.5 bg-foreground/10 rounded" />
+                    <div className="w-1/2 h-0.5 bg-foreground/10 rounded" />
+                  </div>
+
+                  {/* Muestras de secciones */}
+                  <div className="grid grid-cols-2 gap-1 mt-1">
+                    <div className="h-4 rounded bg-foreground/[0.03] border border-foreground/5 p-0.5 flex flex-col justify-between">
+                      <div className="w-4 h-0.5 bg-foreground/20 rounded" />
+                      <div className="w-full h-0.5 bg-foreground/10 rounded" />
+                    </div>
+                    <div className="h-4 rounded bg-foreground/[0.03] border border-foreground/5 p-0.5 flex flex-col justify-between">
+                      <div className="w-4 h-0.5 bg-[#FF6A13]/40 rounded" />
+                      <div className="w-full h-0.5 bg-foreground/10 rounded" />
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Círculo de luz decorativo interno */}
+                <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-[#FF6A13]/10 rounded-full blur-xl pointer-events-none" />
+              </div>
+
+              {/* Distintivo de SEO / Lighthouse 100% */}
+              <div className="absolute top-2 right-3 font-mono text-[8px] text-[#FF6A13] bg-[#FF6A13]/10 px-2 py-0.5 rounded border border-[#FF6A13]/20 flex items-center gap-1">
+                <span className="w-1 h-1 rounded-full bg-[#FF6A13] animate-ping"></span>
+                SEO & Rendimiento 100%
+              </div>
+            </div>
+
+            {/* Contenido descriptivo */}
+            <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
+              <div>
+                <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-[#FF6A13]/10 text-[#FF6A13] rounded-full mb-4">
+                  Desarrollo Web de Alta Gama
+                </span>
+                <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-[#FF6A13] transition-colors">
+                  Plataforma Web DuyvesTI
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
+                  Nuestra propia vitrina digital construida con tecnologías de última generación. Destaca por su velocidad de carga instantánea, diseño adaptativo impecable, tema oscuro/claro automático y optimización avanzada para destacar en los buscadores de Google.
+                </p>
+              </div>
+
+              {/* Tecnologías */}
+              <div className="flex flex-wrap gap-1.5">
+                {["Tecnología de Punta", "Carga Ultra Rápida", "Listo para Google", "Diseño Adaptable"].map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* TARJETA 4: CTA - Tu proyecto a medida */}
           <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.02] border border-dashed border-foreground/20 hover:border-[#FF6A13]/50 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(255,106,19,0.05)] justify-between p-8">
             
             {/* Visualizador superior interactivo de wireframe */}
@@ -257,10 +353,10 @@ export default function Portfolio() {
             <div className="flex-1 flex flex-col justify-between mt-6">
               <div>
                 <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-[#FF6A13] transition-colors">
-                  ¿Tienes un desafío técnico para tu empresa?
+                  ¿Tienes un desafío en tu negocio?
                 </h4>
                 <p className="text-foreground/60 text-sm leading-relaxed mb-6">
-                  Nos apasiona resolver problemas complejos. Ya sea una integración de sistemas, procesamiento inteligente de datos o una plataforma web de alto rendimiento sin mensualidades absurdas.
+                  Nos apasiona hacerte la vida más fácil. Ya sea conectando tus sistemas de venta, automatizando tus tareas diarias o creando una página web rápida y profesional que atraiga clientes, estamos listos para ayudarte.
                 </p>
               </div>
 
@@ -277,6 +373,29 @@ export default function Portfolio() {
             </div>
           </div>
 
+        </div>
+
+        {/* Banner de confianza tecnológica */}
+        <div className="mt-16 p-6 rounded-3xl bg-foreground/[0.01] dark:bg-foreground/[0.02] border border-foreground/10 flex flex-col md:flex-row md:items-center justify-between gap-6 backdrop-blur-sm shadow-sm">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FF6A13]/10 border border-[#FF6A13]/20 flex items-center justify-center text-xl shadow-inner">
+              🛡️
+            </div>
+            <div>
+              <h4 className="text-base font-extrabold text-foreground">Garantía de Alto Rendimiento</h4>
+              <p className="text-sm text-foreground/60">Construimos tu plataforma con la misma tecnología que sostiene a los líderes globales.</p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            {["Netflix", "ChatGPT", "Claude", "Spotify", "Twitch", "TikTok", "Notion"].map((brand) => (
+              <span 
+                key={brand} 
+                className="text-xs font-bold text-foreground/80 bg-foreground/[0.03] dark:bg-white/[0.02] px-4 py-1.5 rounded-full border border-foreground/10 hover:border-[#FF6A13]/40 hover:bg-[#FF6A13]/5 transition-all select-none"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
         </div>
 
       </div>
