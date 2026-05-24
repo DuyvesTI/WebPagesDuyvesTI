@@ -5,27 +5,27 @@ import React from "react";
 export default function Pricing() {
   const plans = [
     {
-      name: "Landing Premium",
+      name: "Landing Emprendedor",
       price: "$149.990",
-      description: "Ideal para campañas, portfolios o captación de leads con alto impacto visual.",
+      description: "Ideal para lanzar una idea al mercado local o captar contactos rápidos de forma económica.",
       features: [
         "One-Page (hasta 5 secciones)",
-        "Diseño atractivo a tu medida",
+        "Diseño moderno y exclusivo",
         "Animaciones sutiles e interactivas",
-        "Página ultrarrápida y moderna",
+        "Página ultrarrápida optimizada",
         "Formulario de contacto funcional",
         "Botón de WhatsApp flotante",
         "Optimización SEO básica",
-        "Puesta en producción al aire",
+        "Puesta en marcha en Internet",
         "Configuración de Dominio"
       ],
       cta: "Empezar proyecto",
       highlighted: false,
     },
     {
-      name: "Web Corporativa",
+      name: "Web PyME / Corporativa",
       price: "$299.990",
-      description: "Para empresas establecidas que buscan autoridad, rendimiento y crecimiento.",
+      description: "Pensado para negocios consolidados que buscan posicionarse y generar autoridad en su zona.",
       features: [
         "Sitio Multi-página (hasta 6 páginas)",
         "Diseño Premium Exclusivo",
@@ -33,24 +33,24 @@ export default function Pricing() {
         "Modo oscuro y claro automático",
         "Lista para destacar en Google (SEO)",
         "Conexión con estadísticas de visitas",
-        "Despliegue y Puesta en Producción",
+        "Puesta en marcha y soporte inicial",
         "Configuración de Dominio"
       ],
       cta: "El más elegido",
       highlighted: true,
     },
     {
-      name: "App Web a Medida",
+      name: "Startup & E-Commerce",
       price: "Cotizar",
-      description: "Soluciones de software personalizadas, plataformas SaaS o e-commerce complejos.",
+      description: "Soluciones con base de datos, tiendas online, sistemas de reservas o plataformas de software.",
       features: [
         "Sistema preparado para crecer",
         "Gestión de información de clientes",
-        "Panel de Administración",
+        "Panel de Administración intuitivo",
         "Ingreso seguro para tus usuarios",
         "Conexión con otros sistemas (facturas, envíos)",
         "Revisión exhaustiva sin errores",
-        "Puesta en producción y despliegue",
+        "Acompañamiento y despliegue total",
         "Configuración Servidores y Dominio"
       ],
       cta: "Hablar con un experto",
@@ -89,7 +89,7 @@ export default function Pricing() {
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#FF6A13] to-orange-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                  Recomendado para Empresas
+                  Recomendado para PyMEs
                 </div>
               )}
 

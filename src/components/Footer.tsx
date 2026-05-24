@@ -8,7 +8,7 @@ export default function Footer() {
                             <span className="text-brand-orange">Duyves</span>TI
                         </h3>
                         <p className="text-foreground/70 text-sm">
-                            Desarrollamos soluciones web profesionales y atractivas para tu negocio.
+                            Desarrollamos soluciones web de alta gama para impulsar el crecimiento de PyMEs, startups y emprendimientos locales.
                         </p>
                     </div>
 

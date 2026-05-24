@@ -6,27 +6,27 @@ export default function Process() {
   const steps = [
     {
       id: "01",
-      title: "Descubrimiento & Estrategia",
+      title: "Descubrimiento & Estrategia Local",
       description:
-        "Analizamos a fondo tu negocio, tus competidores y tus clientes ideales. Organizamos la información de tu empresa de forma estratégica para que tus clientes encuentren lo que buscan rápido y se comuniquen contigo, sin dejar nada al azar.",
+        "Analizamos tu negocio y competidores locales para estructurar una página web que realmente atraiga clientes a tu zona, de forma clara y sin tecnicismos innecesarios.",
     },
     {
       id: "02",
-      title: "Diseño Visual Atractivo",
+      title: "Diseño con Identidad",
       description:
-        "Desarrollamos interfaces hechas a medida (nada de plantillas prefabricadas). Cuidamos cada detalle visual para que tu empresa transmita confianza y profesionalismo desde el primer segundo.",
+        "Creamos la imagen digital de tu negocio desde cero. Diseños limpios, modernos y confiables que hacen que tu comunidad se sienta orgullosa de tu marca y te prefiera.",
     },
     {
       id: "03",
-      title: "Desarrollo y Programación de Alta Calidad",
+      title: "Tecnología Global",
       description:
-        "A diferencia de las alternativas lentas, nosotros creamos tu página desde cero con tecnología moderna. Tu sitio web cargará rapidísimo, no se caerá y estará preparado desde su base para aparecer en los primeros lugares de Google.",
+        "Programamos tu web con tecnologías modernas (como Next.js y Tailwind) para que cargue al instante en teléfonos y computadores, posicionándote primero en las búsquedas de Google.",
     },
     {
       id: "04",
-      title: "Lanzamiento y Puesta en Producción",
+      title: "Lanzamiento y Acompañamiento",
       description:
-        "Nos encargamos de toda la configuración técnica para que tu web esté al aire. Conectamos tu dominio, configuramos el alojamiento y desplegamos tu proyecto con los más altos estándares de rendimiento, para que no tengas que preocuparte de nada técnico.",
+        "Nos encargamos de toda la configuración del hosting y tu dominio. Te entregamos la web lista y te damos soporte cercano para que no tengas que preocuparte por nada técnico.",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function Process() {
             Proceso de Desarrollo <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Profesional</span>
           </h3>
           <p className="text-xl text-foreground/70">
-            No armamos páginas en sistemas básicos. Nuestra agencia ejecuta soluciones tecnológicas y diseño digital de primer nivel para empresas.
+            Creemos en democratizar la tecnología. Ayudamos a PyMEs y Startups locales a dar el salto digital con diseño y desarrollo web profesional, accesible y de primer nivel.
           </p>
         </div>
 

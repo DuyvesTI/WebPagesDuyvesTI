@@ -7,6 +7,22 @@ y este proyecto sigue [Versionamiento Semántico](https://semver.org/lang/es/).
 
 ---
 
+## [0.4.0] - 2026-05-24
+
+### ✨ Agregado
+- Enfoque de marca comunitario orientado al crecimiento de **PyMEs y Startups**.
+- Metadatos globales y etiquetas de búsqueda redefinidos para posicionar mejor a DuyvesTI en este nicho.
+
+### 🔄 Cambiado
+- **Tarjeta de Portafolio "Plataforma Web DuyvesTI"** movida al **primer lugar** de los casos de éxito, sirviendo como la principal vitrina de entrada de la plataforma.
+- Nombres de los planes de inversión ajustados para ser más descriptivos para dueños de negocios locales: **Landing Emprendedor**, **Web PyME / Corporativa**, y **Startup & E-Commerce**.
+- Terminología y flujos simplificados en las secciones **Hero, Servicios, Proceso, Precios y Footer** para mayor cercanía y democratización tecnológica en la comunidad local.
+
+### 🛡️ Conservado
+- Redacción técnica original de los casos de éxito interactivos (*RedactAI* y *Sincronización de Datos*) para no perder los valiosos detalles de ingeniería y automatización.
+
+---
+
 ## [0.3.0] - 2026-05-23
 
 ### ✨ Agregado

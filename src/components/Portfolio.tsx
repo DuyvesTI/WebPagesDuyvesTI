@@ -64,7 +64,7 @@ export default function Portfolio() {
             </h3>
           </div>
           <p className="text-lg text-foreground/60 max-w-md">
-            Creamos software y plataformas diseñadas para resolver problemas reales del día a día de las empresas. Mira algunos ejemplos prácticos de lo que podemos construir para ti.
+            Impulsamos a PyMEs, negocios locales y startups con tecnología de punta. Mira cómo ayudamos a nuestra comunidad a digitalizarse y crecer en Internet de forma inteligente.
           </p>
         </div>
 
@@ -72,167 +72,7 @@ export default function Portfolio() {
         {/* Grid de Proyectos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* TARJETA 1: Sincronización y Traspaso de Datos */}
-          <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-blue-500/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(59,130,246,0.08)]">
-            
-            {/* Visualizador interactivo superior (Mini Consola y Flujo) */}
-            <div className="relative h-64 bg-slate-950 flex flex-col p-4 font-mono text-[11px] text-blue-400 select-none overflow-hidden border-b border-foreground/10">
-              
-              {/* Encabezado de la simulación */}
-              <div className="flex items-center justify-between border-b border-blue-500/20 pb-2 mb-3">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-                  <span className="text-[10px] text-foreground/40 ml-1.5">traspaso_automatico.py</span>
-                </div>
-                <span className="text-[9px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold uppercase animate-pulse">
-                  SINCRONIZANDO
-                </span>
-              </div>
-
-              {/* Diagrama de Flujo Visual */}
-              <div className="flex items-center justify-center gap-4 py-3 bg-blue-950/20 rounded-lg border border-blue-500/10 mb-3 relative">
-                {/* Bloque Izquierda */}
-                <div className="px-2 py-1 rounded bg-blue-900/40 border border-blue-400 text-center z-10 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                  <div className="font-bold text-[9px] text-white">Sistema Antiguo</div>
-                  <div className="text-[8px] text-blue-300">Servidor Local</div>
-                </div>
-
-                {/* Línea de conexión animada */}
-                <div className="flex-1 h-[2px] bg-blue-950 relative overflow-hidden min-w-[30px]">
-                  <div className="absolute top-0 h-full w-4 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-[shimmer_1.5s_infinite]" style={{
-                    backgroundImage: 'linear-gradient(90deg, transparent, #3b82f6, transparent)',
-                    animation: 'shimmer 1.5s infinite linear'
-                  }} />
-                </div>
-
-                {/* Bloque Derecha */}
-                <div className="px-2 py-1 rounded bg-indigo-900/40 border border-indigo-400 text-center z-10 shadow-[0_0_10px_rgba(99,102,241,0.2)]">
-                  <div className="font-bold text-[9px] text-white">Sistema Moderno</div>
-                  <div className="text-[8px] text-indigo-300">Nube Protegida</div>
-                </div>
-              </div>
-
-              {/* Logs simulados de consola */}
-              <div className="flex-1 flex flex-col gap-1.5 overflow-y-auto text-emerald-400/90 pr-1">
-                {consoleLogs.map((log, idx) => (
-                  <div key={idx} className="leading-relaxed border-l border-emerald-500/30 pl-2">
-                    <span className="text-foreground/30 mr-1.5">&gt;</span>
-                    {log}
-                  </div>
-                ))}
-              </div>
-
-              {/* Gradiente inferior para efecto de profundidad */}
-              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-950 to-transparent pointer-events-none" />
-            </div>
-
-            {/* Contenido descriptivo */}
-            <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
-              <div>
-                <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-blue-500/10 text-blue-500 rounded-full mb-4">
-                  Automatización e Integración
-                </span>
-                <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-blue-500 transition-colors">
-                  Sincronización y Traspaso de Datos
-                </h4>
-                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                  Diseñamos un sistema inteligente que traslada de forma automática miles de tareas, facturas, archivos e historiales de clientes desde software antiguos hacia plataformas modernas en la nube. Ahorró cientos de horas de digitación manual y evitó cualquier pérdida de información crítica.
-                </p>
-              </div>
-
-              {/* Tecnologías */}
-              <div className="flex flex-wrap gap-1.5">
-                {["Conexión de Sistemas", "Respaldo Seguro", "Ahorro de Tiempo", "100% Automático"].map((tag, i) => (
-                  <span 
-                    key={i} 
-                    className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* TARJETA 2: RedactAI - Tachado Inteligente */}
-          <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-emerald-500/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)]">
-            
-            {/* Visualizador interactivo superior (Mini Documento con Escáner y Tachado) */}
-            <div className="relative h-64 bg-slate-950 flex flex-col items-center justify-center p-6 overflow-hidden border-b border-foreground/10">
-              
-              {/* Documento simulado */}
-              <div className="w-48 h-52 bg-white rounded shadow-2xl p-4 flex flex-col gap-2 relative overflow-hidden select-none">
-                
-                {/* Filas simuladas de texto */}
-                <div className="w-8 h-2 bg-slate-300 rounded"></div>
-                <div className="w-full h-1 bg-slate-200 rounded"></div>
-                
-                {/* Fila confidencial a tachar 1 */}
-                <div className="relative py-0.5">
-                  <div className="w-3/4 h-3 bg-slate-100 rounded text-[6px] text-slate-800 font-bold px-1 flex items-center">
-                    Miguel Duyvestein
-                  </div>
-                  {/* Bloque de tachado animado */}
-                  <div className="absolute inset-0 bg-slate-950 rounded flex items-center justify-center animate-[pulse_2s_infinite]" />
-                </div>
-
-                <div className="w-full h-1 bg-slate-200 rounded"></div>
-                <div className="w-5/6 h-1 bg-slate-200 rounded"></div>
-
-                {/* Fila confidencial a tachar 2 */}
-                <div className="relative py-0.5">
-                  <div className="w-2/3 h-3 bg-slate-100 rounded text-[5px] text-slate-800 font-bold px-1 flex items-center">
-                    RUT: 18.245.981-K
-                  </div>
-                  {/* Bloque de tachado animado */}
-                  <div className="absolute inset-0 bg-slate-950 rounded flex items-center justify-center animate-[pulse_2s_infinite_delayed]" style={{ animationDelay: "0.5s" }} />
-                </div>
-
-                <div className="w-full h-1 bg-slate-200 rounded"></div>
-                
-                {/* Lente de Escáner Digital (Línea verde de Visión Artificial) */}
-                <div className="absolute left-0 right-0 h-[2px] bg-emerald-500 shadow-[0_0_8px_#10b981] animate-[scan_3s_infinite_linear]" style={{
-                  animation: 'scan 3s infinite ease-in-out'
-                }} />
-              </div>
-
-              {/* Overlay de información técnica */}
-              <div className="absolute top-2 right-3 font-mono text-[9px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/20">
-                IA / Protección de Datos
-              </div>
-            </div>
-
-            {/* Contenido descriptivo */}
-            <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
-              <div>
-                <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-emerald-500/10 text-emerald-500 rounded-full mb-4">
-                  Inteligencia Artificial y Seguridad
-                </span>
-                <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-emerald-500 transition-colors">
-                  Protector de Datos Confidenciales
-                </h4>
-                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                  Desarrollamos una herramienta inteligente que "lee" contratos, facturas y PDFs escaneados para detectar y tachar automáticamente datos confidenciales (como nombres, documentos de identidad y firmas). Ideal para garantizar la privacidad y cumplir con la ley de protección de datos en segundos.
-                </p>
-              </div>
-
-              {/* Tecnologías */}
-              <div className="flex flex-wrap gap-1.5">
-                {["Lectura Inteligente", "Seguridad Legal", "Privacidad", "Cumplimiento"].map((tag, i) => (
-                  <span 
-                    key={i} 
-                    className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* TARJETA 3: Plataforma Web DuyvesTI */}
+          {/* TARJETA 1: Plataforma Web DuyvesTI */}
           <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-[#FF6A13]/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(255,106,19,0.08)]">
             
             {/* Visualizador interactivo superior (Mini Navegador / Esqueleto de la Web con Switcher) */}
@@ -330,7 +170,167 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* TARJETA 4: CTA - Tu proyecto a medida */}
+          {/* TARJETA 2: Sincronización y Traspaso de Datos */}
+          <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-blue-500/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(59,130,246,0.08)]">
+            
+            {/* Visualizador interactivo superior (Mini Consola y Flujo) */}
+            <div className="relative h-64 bg-slate-950 flex flex-col p-4 font-mono text-[11px] text-blue-400 select-none overflow-hidden border-b border-foreground/10">
+              
+              {/* Encabezado de la simulación */}
+              <div className="flex items-center justify-between border-b border-blue-500/20 pb-2 mb-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                  <span className="text-[10px] text-foreground/40 ml-1.5">traspaso_automatico.py</span>
+                </div>
+                <span className="text-[9px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold uppercase animate-pulse">
+                  SINCRONIZANDO
+                </span>
+              </div>
+
+              {/* Diagrama de Flujo Visual */}
+              <div className="flex items-center justify-center gap-4 py-3 bg-blue-950/20 rounded-lg border border-blue-500/10 mb-3 relative">
+                {/* Bloque Izquierda */}
+                <div className="px-2 py-1 rounded bg-blue-900/40 border border-blue-400 text-center z-10 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+                  <div className="font-bold text-[9px] text-white">Sistema Antiguo</div>
+                  <div className="text-[8px] text-blue-300">Servidor Local</div>
+                </div>
+
+                {/* Línea de conexión animada */}
+                <div className="flex-1 h-[2px] bg-blue-950 relative overflow-hidden min-w-[30px]">
+                  <div className="absolute top-0 h-full w-4 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-[shimmer_1.5s_infinite]" style={{
+                    backgroundImage: 'linear-gradient(90deg, transparent, #3b82f6, transparent)',
+                    animation: 'shimmer 1.5s infinite linear'
+                  }} />
+                </div>
+
+                {/* Bloque Derecha */}
+                <div className="px-2 py-1 rounded bg-indigo-900/40 border border-indigo-400 text-center z-10 shadow-[0_0_10px_rgba(99,102,241,0.2)]">
+                  <div className="font-bold text-[9px] text-white">Sistema Moderno</div>
+                  <div className="text-[8px] text-indigo-300">Nube Protegida</div>
+                </div>
+              </div>
+
+              {/* Logs simulados de consola */}
+              <div className="flex-1 flex flex-col gap-1.5 overflow-y-auto text-emerald-400/90 pr-1">
+                {consoleLogs.map((log, idx) => (
+                  <div key={idx} className="leading-relaxed border-l border-emerald-500/30 pl-2">
+                    <span className="text-foreground/30 mr-1.5">&gt;</span>
+                    {log}
+                  </div>
+                ))}
+              </div>
+
+              {/* Gradiente inferior para efecto de profundidad */}
+              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-950 to-transparent pointer-events-none" />
+            </div>
+
+            {/* Contenido descriptivo */}
+            <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
+              <div>
+                <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-blue-500/10 text-blue-500 rounded-full mb-4">
+                  Automatización e Integración
+                </span>
+                <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-blue-500 transition-colors">
+                  Sincronización y Traspaso de Datos
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
+                  Diseñamos un sistema inteligente que traslada de forma automática miles de tareas, facturas, archivos e historiales de clientes desde software antiguos hacia plataformas modernas en la nube. Ahorró cientos de horas de digitación manual y evitó cualquier pérdida de información crítica.
+                </p>
+              </div>
+
+              {/* Tecnologías */}
+              <div className="flex flex-wrap gap-1.5">
+                {["Conexión de Sistemas", "Respaldo Seguro", "Ahorro de Tiempo", "100% Automático"].map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* TARJETA 3: RedactAI - Tachado Inteligente */}
+          <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.01] dark:bg-background border border-foreground/10 hover:border-emerald-500/30 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)]">
+            
+            {/* Visualizador interactivo superior (Mini Documento con Escáner y Tachado) */}
+            <div className="relative h-64 bg-slate-950 flex flex-col items-center justify-center p-6 overflow-hidden border-b border-foreground/10">
+              
+              {/* Documento simulado */}
+              <div className="w-48 h-52 bg-white rounded shadow-2xl p-4 flex flex-col gap-2 relative overflow-hidden select-none">
+                
+                {/* Filas simuladas de texto */}
+                <div className="w-8 h-2 bg-slate-300 rounded"></div>
+                <div className="w-full h-1 bg-slate-200 rounded"></div>
+                
+                {/* Fila confidencial a tachar 1 */}
+                <div className="relative py-0.5">
+                  <div className="w-3/4 h-3 bg-slate-100 rounded text-[6px] text-slate-800 font-bold px-1 flex items-center">
+                    Miguel Duyvestein
+                  </div>
+                  {/* Bloque de tachado animado */}
+                  <div className="absolute inset-0 bg-slate-950 rounded flex items-center justify-center animate-[pulse_2s_infinite]" />
+                </div>
+
+                <div className="w-full h-1 bg-slate-200 rounded"></div>
+                <div className="w-5/6 h-1 bg-slate-200 rounded"></div>
+
+                {/* Fila confidencial a tachar 2 */}
+                <div className="relative py-0.5">
+                  <div className="w-2/3 h-3 bg-slate-100 rounded text-[5px] text-slate-800 font-bold px-1 flex items-center">
+                    RUT: 18.245.981-K
+                  </div>
+                  {/* Bloque de tachado animado */}
+                  <div className="absolute inset-0 bg-slate-950 rounded flex items-center justify-center animate-[pulse_2s_infinite_delayed]" style={{ animationDelay: "0.5s" }} />
+                </div>
+
+                <div className="w-full h-1 bg-slate-200 rounded"></div>
+                
+                {/* Lente de Escáner Digital (Línea verde de Visión Artificial) */}
+                <div className="absolute left-0 right-0 h-[2px] bg-emerald-500 shadow-[0_0_8px_#10b981] animate-[scan_3s_infinite_linear]" style={{
+                  animation: 'scan 3s infinite ease-in-out'
+                }} />
+              </div>
+
+              {/* Overlay de información técnica */}
+              <div className="absolute top-2 right-3 font-mono text-[9px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/20">
+                IA / Protección de Datos
+              </div>
+            </div>
+
+            {/* Contenido descriptivo */}
+            <div className="p-8 flex-1 flex flex-col justify-between relative bg-background">
+              <div>
+                <span className="inline-block text-xs font-bold uppercase tracking-wider py-1 px-3 bg-emerald-500/10 text-emerald-500 rounded-full mb-4">
+                  Inteligencia Artificial y Seguridad
+                </span>
+                <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-emerald-500 transition-colors">
+                  Protector de Datos Confidenciales
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed mb-6">
+                  Desarrollamos una herramienta inteligente que "lee" contratos, facturas y PDFs escaneados para detectar y tachar automáticamente datos confidenciales (como nombres, documentos de identidad y firmas). Ideal para garantizar la privacidad y cumplir con la ley de protección de datos en segundos.
+                </p>
+              </div>
+
+              {/* Tecnologías */}
+              <div className="flex flex-wrap gap-1.5">
+                {["Lectura Inteligente", "Seguridad Legal", "Privacidad", "Cumplimiento"].map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="text-[11px] font-medium text-foreground/60 px-2 py-0.5 border border-foreground/10 rounded bg-foreground/[0.02]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* TARJETA 4: CTA - Impulsando tu PyME o Startup */}
           <div className="group relative rounded-3xl overflow-hidden bg-foreground/[0.02] border border-dashed border-foreground/20 hover:border-[#FF6A13]/50 transition-all duration-500 flex flex-col min-h-[520px] shadow-sm hover:shadow-[0_12px_40px_rgba(255,106,19,0.05)] justify-between p-8">
             
             {/* Visualizador superior interactivo de wireframe */}
@@ -345,7 +345,7 @@ export default function Portfolio() {
               </div>
 
               <div className="mt-4 font-bold text-xs uppercase tracking-widest text-foreground/50 group-hover:text-foreground transition-colors">
-                Tu Solución de Software
+                Tu Solución Digital
               </div>
             </div>
 
@@ -353,10 +353,10 @@ export default function Portfolio() {
             <div className="flex-1 flex flex-col justify-between mt-6">
               <div>
                 <h4 className="text-2xl font-bold text-foreground mb-3 group-hover:text-[#FF6A13] transition-colors">
-                  ¿Tienes un desafío en tu negocio?
+                  ¿Quieres hacer crecer tu PyME o Startup?
                 </h4>
                 <p className="text-foreground/60 text-sm leading-relaxed mb-6">
-                  Nos apasiona hacerte la vida más fácil. Ya sea conectando tus sistemas de venta, automatizando tus tareas diarias o creando una página web rápida y profesional que atraiga clientes, estamos listos para ayudarte.
+                  Nos apasiona hacerte la vida más fácil. Ya sea creando un sitio web rápido y profesional para tu negocio, una plataforma interactiva para tu startup o ayudándote a automatizar tus tareas diarias, estamos listos para impulsar a nuestra comunidad.
                 </p>
               </div>
 

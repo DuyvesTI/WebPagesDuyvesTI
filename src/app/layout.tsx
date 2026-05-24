@@ -10,19 +10,19 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://duyvesti.vercel.app'),
   title: {
-    default: "DuyvesTI | Desarrollo Web y Soluciones Tecnológicas para Empresas",
+    default: "DuyvesTI | Desarrollo Web Profesional para PyMEs y Startups",
     template: "%s | DuyvesTI"
   },
-  description: "Impulsa tu negocio con páginas web modernas, ultrarrápidas y listas para dominar Google. En DuyvesTI creamos soluciones a medida sin mensualidades absurdas.",
-  keywords: ["desarrollo web", "páginas web para pymes", "agencia web", "diseño web chile", "creación de sitios web", "desarrollo web a medida", "posicionamiento SEO"],
+  description: "Potenciamos tu PyME o Startup local con sitios web ultrarrápidos, profesionales y optimizados para Google. Sin mensualidades absurdas y con tecnología global al alcance de tu comunidad.",
+  keywords: ["desarrollo web", "páginas web para pymes", "agencia web", "diseño web chile", "creación de sitios web", "desarrollo web startups", "posicionamiento SEO"],
   authors: [{ name: "DuyvesTI" }],
   creator: "DuyvesTI",
   openGraph: {
     type: "website",
     locale: "es_CL",
     url: "/",
-    title: "DuyvesTI | Desarrollo Web Profesional",
-    description: "Impulsa tu negocio con páginas web modernas, ultrarrápidas y listas para dominar Google.",
+    title: "DuyvesTI | Desarrollo Web para PyMEs y Startups",
+    description: "Potenciamos tu PyME o Startup local con sitios web ultrarrápidos y profesionales.",
     siteName: "DuyvesTI",
   },
   twitter: {

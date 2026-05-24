@@ -2,22 +2,22 @@ export default function Services() {
     const services = [
         {
             title: "Diseño Web Responsivo",
-            description: "Sitios web que se adaptan perfectamente a dispositivos móviles, tablets y computadoras de escritorio.",
+            description: "Sitios web optimizados para celulares y PC, listos para captar clientes en tu localidad y todo el país.",
             icon: "📱"
         },
         {
-            title: "Desarrollo a Medida",
-            description: "Páginas súper rápidas y seguras, construidas a tu medida para que nunca fallen cuando tus clientes te necesiten.",
+            title: "Web de Alto Rendimiento",
+            description: "Páginas súper rápidas y seguras, diseñadas a la medida de tu presupuesto para que nunca fallen frente a la competencia.",
             icon: "⚡"
         },
         {
             title: "Visibilidad en Google (SEO)",
-            description: "Mejoramos la visibilidad de tu negocio en Google con prácticas de optimización de motores de búsqueda.",
+            description: "Hacemos que tu local o emprendimiento aparezca primero cuando tus clientes busquen tus servicios en Internet.",
             icon: "🔍"
         },
         {
-            title: "Puesta en Producción",
-            description: "Nos encargamos de toda la configuración, instalación y puesta al aire con tu dominio. Te entregamos la web lista y funcionando en Internet.",
+            title: "Puesta en Marcha Simple",
+            description: "Nos encargamos de todo: hosting, dominio y configuración. Te lo entregamos llave en mano para que tú solo te preocupes de tu negocio.",
             icon: "🚀"
         }
     ];
@@ -30,7 +30,7 @@ export default function Services() {
                         Nuestros <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A13] to-orange-300">Servicios</span>
                     </h2>
                     <p className="text-foreground/60 max-w-2xl mx-auto">
-                        Llevamos tu negocio al siguiente nivel con tecnología de punta y diseño centrado en el usuario.
+                        Ayudamos a la comunidad de emprendedores a dar el salto digital con tecnologías modernas, diseño exclusivo y resultados garantizados.
                     </p>
                 </div>
 
