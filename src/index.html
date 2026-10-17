@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="DuyvesTI: Desarrollo web transparente para PyMEs y Startups en Chile. Paga una sola vez, sé el dueño total de tu web y olvídate de arriendos mensuales abusivos.">
+ <meta name="theme-color" content="#F8FAFC">
+ <title>DuyvesTI | Desarrollo Web Profesional para PyMEs y Startups en Chile</title>
+ <script>
+  (function () {
+   try {
+    var stored = localStorage.getItem('duyvesti-theme') || localStorage.getItem('duyvesti_theme');
+    var theme = (stored === 'light' || stored === 'dark') ? stored : 'light';
+    var root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+     root.classList.add('dark');
+    } else {
+     root.classList.remove('dark');
+    }
+    root.style.colorScheme = theme;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+     meta.setAttribute('content', theme === 'dark' ? '#0A0D14' : '#F8FAFC');
+    }
+   } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.remove('dark');
+   }
+  })();
+ </script>
+ <link rel="stylesheet" href="/src/css/globals.css">
+ <link rel="stylesheet" href="/src/css/components.css">
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DuyvesTI",
+  "description": "Desarrollo web profesional, ultrarrápido y accesible para PyMEs y Startups en Chile.",
+  "url": "https://duyvesti.cl",
+  "telephone": "+56929750390",
+  "priceRange": "$$",
+  "currenciesAccepted": "CLP",
+  "paymentAccepted": "Transferencia, Webpay, Tarjeta de Crédito",
+  "address": {
+   "@type": "PostalAddress",
+   "addressCountry": "CL",
+   "addressLocality": "Santiago",
+   "addressRegion": "Región Metropolitana"
+  }
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "¿Realmente soy el dueño de mi sitio web y no pago arriendo?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Sí, 100% garantizado. Eres el dueño total de todo el código fuente, diseño y contenidos sin arriendos mensuales forzados."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿A nombre de quién queda registrado el dominio (.cl o .com)?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "El dominio se inscribe directamente a nombre de tu empresa o RUT en NIC Chile con titularidad legal exclusiva."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿Cuánto demora el desarrollo y entrega llave en mano?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Landing pages en 5 días, sitios PyME en 10 días y plataformas a medida en 20 días."
+    }
+   }
+  ]
+ }
+ </script>
+</head>
+<body>
+ <a href="#main-content" class="skip-to-content skip-link sr-only">
+  Saltar al contenido principal
+ </a>
+ <header id="site-header" class="site-header sticky top-0" role="banner">
+  <div class="header-container">
+   <a href="#inicio" class="brand-link" aria-label="DuyvesTI - Volver al inicio">
+    <div class="brand-monogram" aria-hidden="true">
+     <span class="monogram-d">D</span><span class="monogram-ti">TI</span>
+    </div>
+    <div class="brand-info">
+     <span class="brand-title">DuyvesTI</span>
+     <span class="brand-subtitle">Desarrollo Web</span>
+    </div>
+   </a>
+   <nav id="desktop-navigation" class="desktop-nav" aria-label="Navegación principal">
+    <ul class="nav-list" role="list">
+     <li><a href="#inicio" class="nav-link active" aria-current="page">Inicio</a></li>
+     <li><a href="#proceso" class="nav-link">Proceso</a></li>
+     <li><a href="#planes" class="nav-link">Planes</a></li>
+     <li><a href="#portafolio" class="nav-link">Casos de Éxito</a></li>
+     <li><a href="#faq" class="nav-link">FAQ</a></li>
+     <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+   </nav>
+   <div class="header-actions">
+    <button id="theme-toggle"
+        type="button"
+        class="btn-icon theme-toggle"
+        data-theme-toggle
+        aria-label="Cambiar a modo claro"
+        title="Cambiar tema de color">
+     <svg class="theme-icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+     </svg>
+     <svg class="theme-icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+     </svg>
+    </button>
+    <a href="#planes" class="btn btn-sm btn-primary header-cta">
+     Ver Planes
+    </a>
+    <button id="mobile-menu-toggle"
+        type="button"
+        class="mobile-menu-toggle mobile-menu-btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menú de navegación"
+        aria-haspopup="dialog">
+     <span class="hamburger-box" aria-hidden="true">
+      <span class="hamburger-bar bar-1"></span>
+      <span class="hamburger-bar bar-2"></span>
+      <span class="hamburger-bar bar-3"></span>
+     </span>
+    </button>
+   </div>
+  </div>
+ </header>
+ <div id="mobile-drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+ <aside id="mobile-menu"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menú principal de navegación"
+    class="mobile-drawer"
+    aria-hidden="true"
+    tabindex="-1">
+  <div class="drawer-header">
+   <div class="drawer-brand">
+    <div class="brand-monogram" aria-hidden="true">
+     <span class="monogram-d">D</span><span class="monogram-ti">TI</span>
+    </div>
+    <div class="brand-info">
+     <span class="brand-title">DuyvesTI</span>
+     <span class="brand-subtitle">Desarrollo Web</span>
+    </div>
+   </div>
+   <button id="mobile-drawer-close"
+       type="button"
+       class="drawer-close-btn"
+       aria-label="Cerrar menú de navegación">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+     <line x1="18" y1="6" x2="6" y2="18"></line>
+     <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+   </button>
+  </div>
+  <nav class="drawer-nav" aria-label="Navegación móvil">
+   <ul class="drawer-nav-list" role="list">
+    <li><a href="#inicio" class="drawer-link active" aria-current="page"><span>Inicio</span></a></li>
+    <li><a href="#proceso" class="drawer-link"><span>El Método DuyvesTI</span></a></li>
+    <li><a href="#planes" class="drawer-link"><span>Planes</span></a></li>
+    <li><a href="#portafolio" class="drawer-link"><span>Casos de Éxito</span></a></li>
+    <li><a href="#faq" class="drawer-link"><span>Preguntas Frecuentes</span></a></li>
+    <li><a href="#contacto" class="drawer-link"><span>Contacto</span></a></li>
+   </ul>
+  </nav>
+  <div class="drawer-footer">
+   <a href="#planes" class="btn btn-primary drawer-cta-btn">
+    Ver Planes
+   </a>
+   <a href="https://wa.me/56929750390?text=Hola%20DuyvesTI,%20me%20gustar%C3%ADa%20cotizar%20un%20sitio%20web"
+    class="drawer-whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp directo (abre en nueva pestaña)">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <span>WhatsApp Directo</span>
+   </a>
+   <p class="drawer-guarantee-note">
+    ✓ Propiedad 100% de tu código y dominio
+   </p>
+  </div>
+ </aside>
+ <main id="main-content" tabindex="-1">
+  <header id="inicio" class="hero-section" aria-label="Introducción y propuesta de valor">
+   <section id="hero" class="container hero-container max-w-7xl">
+    <div class="hero-content">
+     <div class="hero-badge-pill" role="status" aria-label="Especialidad">
+      <span class="badge-dot" aria-hidden="true"></span>
+      <span class="badge-text">Desarrollo Web Transparente en Chile</span>
+     </div>
+     <h1 class="hero-headline">
+      Paga una sola vez, sé el <span class="highlight-brand">dueño total de tu web</span> y olvídate de arriendos mensuales abusivos.
+     </h1>
+     <p class="hero-subheadline">
+      Diseñamos sitios web profesionales, ultrarrápidos y optimizados para Google para PyMEs y Startups chilenas. Código 100% tuyo, sin ataduras mensuales y con precios claros en CLP.
+     </p>
+     <div class="hero-cta-group">
+      <a href="#contacto" class="btn btn-primary hero-btn-main" id="hero-cta-quoter">
+       <span>Cotizar mi Proyecto</span>
+       <svg class="btn-arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+       </svg>
+      </a>
+      <a href="#planes" class="btn btn-outline hero-btn-secondary" id="hero-cta-pricing">
+       <span>Ver Planes y Precios</span>
+      </a>
+     </div>
+     <div class="hero-microcopy">
+      <svg class="microcopy-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+       <circle cx="12" cy="12" r="10"></circle>
+       <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      <span>Planes transparentes en CLP • Respuesta garantizada en menos de 2 horas</span>
+     </div>
+     <div class="hero-trust-badges" role="list" aria-label="Garantías del servicio">
+      <div class="trust-badge-item" role="listitem">
+       <div class="trust-badge-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+         <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+       </div>
+       <div class="trust-badge-info">
+        <strong class="trust-badge-title">100% Código Propio</strong>
+        <span class="trust-badge-desc">El código y diseño son tuyos para siempre. Sin comodatos ni letras chicas.</span>
+       </div>
+      </div>
+      <div class="trust-badge-item" role="listitem">
+       <div class="trust-badge-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <circle cx="12" cy="12" r="10"></circle>
+         <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+        </svg>
+       </div>
+       <div class="trust-badge-info">
+        <strong class="trust-badge-title">Sin Pagos Mensuales Forzados</strong>
+        <span class="trust-badge-desc">Pagas una sola vez por tu proyecto terminado. Cero mensualidades de arriendo.</span>
+       </div>
+      </div>
+      <div class="trust-badge-item" role="listitem">
+       <div class="trust-badge-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <circle cx="12" cy="12" r="10"></circle>
+         <line x1="2" y1="12" x2="22" y2="12"></line>
+         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+       </div>
+       <div class="trust-badge-info">
+        <strong class="trust-badge-title">Dominio y Hosting a tu Nombre</strong>
+        <span class="trust-badge-desc">Las credenciales maestras y la titularidad legal en NIC Chile son 100% de tu empresa.</span>
+       </div>
+      </div>
+      <div class="trust-badge-item" role="listitem">
+       <div class="trust-badge-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+       </div>
+       <div class="trust-badge-info">
+        <strong class="trust-badge-title">Carga Ultrarrápida (&lt; 1.2s)</strong>
+        <span class="trust-badge-desc">Optimizado para celulares y posicionado primero en Google para captar más clientes.</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+     <div class="hero-preview-card">
+      <div class="preview-header">
+       <div class="preview-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+       </div>
+       <div class="preview-address-bar">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span>tu-empresa.cl</span>
+       </div>
+       <span class="preview-badge-status">100% Propio</span>
+      </div>
+      <div class="preview-body">
+       <div class="metric-row">
+        <div class="metric-card">
+         <span class="metric-value text-accent-green">100%</span>
+         <span class="metric-label">Código Tuyo</span>
+        </div>
+        <div class="metric-card">
+         <span class="metric-value text-accent-orange">$0 CLP</span>
+         <span class="metric-label">Arriendo Mensual</span>
+        </div>
+       </div>
+       <div class="metric-speed-box">
+        <div class="speed-header">
+         <span>Velocidad Móvil (LCP)</span>
+         <strong class="speed-badge">0.8 seg</strong>
+        </div>
+        <div class="speed-bar">
+         <div class="speed-fill" style="width: 96%;"></div>
+        </div>
+        <span class="speed-note">Calificación de Rendimiento: 99/100 en Google</span>
+       </div>
+       <div class="preview-guarantee-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Entrega Llave en Mano con Garantía Total</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </header>
+  <section id="proceso" class="process-section" aria-labelledby="process-title">
+   <div class="container">
+    <div class="section-header text-center">
+     <span class="section-eyebrow" role="status">METODOLOGÍA TRANSPARENTE</span>
+     <h2 id="process-title" class="section-title">
+      El Método DuyvesTI: Tu web propia en 4 pasos claros
+     </h2>
+     <p class="section-subtitle">
+      Sin enredos técnicos, sin meses de espera y sin costos imprevistos. Un proceso estructurado para que tengas una plataforma rentable y bajo tu control total.
+     </p>
+    </div>
+    <div class="process-timeline" role="list" aria-label="Etapas del proceso de desarrollo">
+     <div class="process-card" role="listitem">
+      <div class="process-card-header">
+       <span class="process-number" aria-hidden="true">01</span>
+       <span class="process-badge">Descubrimiento</span>
+      </div>
+      <h3 class="process-card-title">Diagnóstico de Negocio y Objetivos</h3>
+      <p class="process-card-hook">
+       Entendemos lo que vendes y cómo compran tus clientes antes de diseñar.
+      </p>
+      <p class="process-card-desc">
+       Analizamos a fondo tu rubro, tu propuesta de valor y a tus competidores locales en Google. Definimos la estructura de contenidos precisa que responderá las dudas de tus visitantes para convertirlos en clientes reales.
+      </p>
+      <ul class="process-deliverables" aria-label="Entregables de la etapa 1">
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Estructura enfocada en ventas y cotizaciones</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Palabras clave para búsquedas en tu zona</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Cronograma con fecha exacta de entrega</span>
+       </li>
+      </ul>
+     </div>
+     <div class="process-card" role="listitem">
+      <div class="process-card-header">
+       <span class="process-number" aria-hidden="true">02</span>
+       <span class="process-badge">Diseño</span>
+      </div>
+      <h3 class="process-card-title">Diseño a Medida y Experiencia de Marca</h3>
+      <p class="process-card-hook">
+       Una imagen profesional que proyecta seriedad y confianza desde el primer vistazo.
+      </p>
+      <p class="process-card-desc">
+       Creamos la identidad visual de tu plataforma respetando los colores corporativos y logotipo de tu negocio. Optimizada al 100% para smartphones para que consultar y comprar sea instantáneo.
+      </p>
+      <ul class="process-deliverables" aria-label="Entregables de la etapa 2">
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Diseño visual 100% original (sin plantillas genéricas)</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Navegación táctil fluida para usuarios móviles</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Botones de WhatsApp y llamadas destacados</span>
+       </li>
+      </ul>
+     </div>
+     <div class="process-card" role="listitem">
+      <div class="process-card-header">
+       <span class="process-number" aria-hidden="true">03</span>
+       <span class="process-badge">Llave en Mano</span>
+      </div>
+      <h3 class="process-card-title">Construcción Rápida y Protección Total</h3>
+      <p class="process-card-hook">
+       Carga ultrarrápida en cualquier teléfono y blindaje contra spam y ataques.
+      </p>
+      <p class="process-card-desc">
+       Construimos tu plataforma web con ingeniería de alto rendimiento para que abra en menos de 1.2 segundos. Blindamos tus formularios contra bots automáticos y dejamos el sitio listo para Google.
+      </p>
+      <ul class="process-deliverables" aria-label="Entregables de la etapa 3">
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Velocidad sub-segundo que no pierde clientes</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Formularios seguros con respaldo anti-pérdida</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Estructura semántica lista para aparecer en Google</span>
+       </li>
+      </ul>
+     </div>
+     <div class="process-card" role="listitem">
+      <div class="process-card-header">
+       <span class="process-number" aria-hidden="true">04</span>
+       <span class="process-badge">Lanzamiento</span>
+      </div>
+      <h3 class="process-card-title">Entrega Llave en Mano y Capacitación</h3>
+      <p class="process-card-hook">
+       Tú recibes las llaves maestras de tu plataforma y el control total de tu inversión.
+      </p>
+      <p class="process-card-desc">
+       Conectamos tu dominio oficial (.cl o .com) con candado SSL activo. Te entregamos el código completo a tu nombre y te guiamos paso a paso para gestionar tus prospectos con soporte directo.
+      </p>
+      <ul class="process-deliverables" aria-label="Entregables de la etapa 4">
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Puesta en marcha con dominio y certificado SSL activo</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Traspaso formal de propiedad y código 100% tuyo</span>
+       </li>
+       <li>
+        <svg class="check-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Garantía post-entrega y soporte técnico directo</span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="process-bottom-cta">
+     <div class="process-callout-text">
+      <strong>¿Listo para dar el salto y tener tu web propia sin pagar arriendos?</strong>
+      <p>Revisa nuestros planes transparentes o contáctanos para asesoría personalizada.</p>
+     </div>
+     <a href="#planes" class="btn btn-primary">
+      <span>Ver Planes de Inversión</span>
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+     </a>
+    </div>
+   </div>
+  </section>
+  <section id="planes" class="content-section pricing-section" aria-labelledby="pricing-heading">
+   <div class="container">
+    <div class="section-header text-center">
+     <span class="section-eyebrow" role="status">INVERSIÓN CLARA Y DEFINITIVA</span>
+     <h2 id="pricing-heading" class="section-title">
+      Planes Transparentes en CLP Sin Letras Chicas
+     </h2>
+     <p class="section-subtitle">
+      Pagas una sola vez por tu proyecto terminado. Sin contratos forzados, sin mensualidades de arriendo y con 100% de propiedad legal de tu código y dominio.
+     </p>
+    </div>
+    <div class="ownership-guarantee-banner" role="region" aria-label="Garantía de propiedad total">
+     <div class="guarantee-icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+       <polyline points="9 12 11 14 15 10"></polyline>
+      </svg>
+     </div>
+     <div class="guarantee-text">
+      <strong>Garantía Anti-Arriendo DuyvesTI:</strong>
+      <span>
+       A diferencia de agencias que retienen tu sitio o cobran mantenciones mensuales obligatorias, en DuyvesTI el código, el diseño y el dominio son <strong>100% de tu empresa</strong> desde el primer día.
+      </span>
+     </div>
+     <div class="guarantee-badge">
+      <span>$0 CLP Mensual</span>
+     </div>
+    </div>
+    <div class="pricing-grid" role="list" aria-label="Planes de desarrollo web">
+     <article class="pricing-card surface-card" role="listitem">
+      <div class="pricing-card-header">
+       <h3 class="plan-name">Plan Landing Emprendedor</h3>
+       <p class="plan-description">Página de aterrizaje de alta conversión para campañas publicitarias, validación de ofertas y captación ágil de clientes con WhatsApp integrado.</p>
+      </div>
+      <div class="pricing-price-box">
+       <div class="price-value">
+        <span class="price-amount">$149.990&nbsp;CLP</span>
+       </div>
+       <span class="price-type">Pago único • Sin mensualidades</span>
+       <div class="price-sla">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Entrega en 5 días hábiles</span>
+       </div>
+      </div>
+      <div class="pricing-features-wrap">
+       <span class="features-label">¿Qué incluye tu proyecto?</span>
+       <ul class="pricing-features-list" aria-label="Prestaciones del Plan Landing">
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>One-Page (hasta 5 secciones) de alta velocidad</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Diseño moderno, exclusivo y optimizado para teléfonos</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Formulario de contacto funcional y botón de WhatsApp flotante</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Optimización SEO para aparecer en Google</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Puesta en marcha en Internet y configuración técnica</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Código fuente 100% tuyo sin dependencias</span>
+        </li>
+       </ul>
+      </div>
+      <div class="pricing-card-footer">
+       <a href="#contacto" class="btn btn-outline btn-full" aria-label="Cotizar Plan Landing Emprendedor de $149.990 CLP">
+        <span>Cotizar Plan Landing</span>
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+       <span class="pricing-zero-rent">$0 CLP arriendo mensual garantizado</span>
+      </div>
+     </article>
+     <article class="pricing-card surface-card pricing-card--featured" role="listitem">
+      <div class="pricing-featured-badge" aria-label="Opción más recomendada">
+       <span>Recomendado • Más Elegido</span>
+      </div>
+      <div class="pricing-card-header">
+       <h3 class="plan-name">Plan Web PyME Comercial</h3>
+       <p class="plan-description">Sitio web corporativo completo para proyectar formalidad y confianza ante clientes y proveedores, con catálogo de servicios y posicionamiento local en Google.</p>
+      </div>
+      <div class="pricing-price-box">
+       <div class="price-value">
+        <span class="price-amount text-brand">$299.990&nbsp;CLP</span>
+       </div>
+       <span class="price-type">Pago único • Sin mensualidades</span>
+       <div class="price-sla">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Entrega en 10 días hábiles</span>
+       </div>
+      </div>
+      <div class="pricing-features-wrap">
+       <span class="features-label">Todo lo del plan Landing más:</span>
+       <ul class="pricing-features-list" aria-label="Prestaciones del Plan Web PyME">
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span><strong>Hasta 5 secciones completas</strong> (Inicio, Servicios, Nosotros, Catálogo, Contacto)</span>
+        </li>
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Catálogo interactivo con cotización directa y derivación por WhatsApp</span>
+        </li>
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Posicionamiento SEO Local para búsquedas en tu comuna</span>
+        </li>
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Correos corporativos (@tu-empresa.cl) configurados</span>
+        </li>
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Capacitación en video para actualizar productos y textos</span>
+        </li>
+        <li>
+         <svg class="check-icon text-brand" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Propiedad 100% de código y dominio a tu nombre</span>
+        </li>
+       </ul>
+      </div>
+      <div class="pricing-card-footer">
+       <a href="#contacto" class="btn btn-primary btn-full" aria-label="Elegir Plan Web PyME Comercial de $299.990 CLP">
+        <span>Elegir Plan Web PyME</span>
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+       <span class="pricing-zero-rent">$0 CLP arriendo mensual garantizado</span>
+      </div>
+     </article>
+     <article class="pricing-card surface-card" role="listitem">
+      <div class="pricing-card-header">
+       <h3 class="plan-name">Plan Plataforma Startup</h3>
+       <p class="plan-description">Plataforma a medida, catálogo avanzado o tienda online con integración de pasarelas de pago Webpay/Transbank para ventas 24/7 sin comisiones mensuales.</p>
+      </div>
+      <div class="pricing-price-box">
+       <span class="price-prefix-label" style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-orange, #FF6A13); margin-bottom: 0.15rem;">Precio desde</span>
+       <div class="price-value">
+        <span class="price-amount">$499.990&nbsp;CLP</span>
+       </div>
+       <span class="price-type">Según alcance del proyecto • Sin mensualidades</span>
+       <div class="price-sla">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Entrega en 20 días hábiles</span>
+       </div>
+      </div>
+      <div class="pricing-features-wrap">
+       <span class="features-label">Todo lo del plan Web PyME más:</span>
+       <ul class="pricing-features-list" aria-label="Prestaciones del Plan Startup">
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Arquitectura modular a medida para requerimientos específicos</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Integración con pasarelas de pago (Webpay / Transbank) y cobros online 24/7</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Plataforma interactiva adaptada a tu modelo de negocio</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Marcado de datos estructurados Schema.org para Google</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Capacitación personalizada y soporte técnico prioritario</span>
+        </li>
+        <li>
+         <svg class="check-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+         <span>Traspaso íntegro de propiedad y repositorio de código</span>
+        </li>
+       </ul>
+      </div>
+      <div class="pricing-card-footer">
+       <a href="#contacto" class="btn btn-outline btn-full" aria-label="Cotizar Plan Plataforma Startup de $499.990 CLP">
+        <span>Cotizar Plan Startup</span>
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+       </a>
+       <span class="pricing-zero-rent">$0 CLP arriendo mensual garantizado</span>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section id="portafolio" class="content-section portfolio-section" aria-labelledby="portfolio-heading">
+   <div class="container">
+    <div class="section-header text-center">
+     <span class="section-eyebrow" role="status">SOLUCIONES INTELIGENTES Y RESULTADOS REALES</span>
+     <h2 id="portfolio-heading" class="section-title">
+      Nuestros Desarrollos y <span class="highlight-brand">Casos Reales</span>
+     </h2>
+     <p class="section-subtitle">
+      Impulsamos a PyMEs, negocios locales y startups con tecnología de punta. Mira cómo ayudamos a nuestra comunidad a digitalizarse y crecer en Internet de forma inteligente.
+     </p>
+    </div>
+    <div class="portfolio-grid" role="list" aria-label="Desarrollos y casos de éxito reales">
+     <!-- Proyecto 1: Plataforma Web DuyvesTI -->
+     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+      <div class="portfolio-visual">
+       <div class="portfolio-fallback-img" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+         <line x1="8" y1="21" x2="16" y2="21"></line>
+         <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        <span class="portfolio-fallback-label">duyvesti.com</span>
+       </div>
+       <span class="portfolio-badge">Desarrollo Web de Alta Gama</span>
+      </div>
+      <div class="portfolio-content">
+       <h3 class="portfolio-title">Plataforma Web DuyvesTI</h3>
+       <p class="portfolio-summary">
+        Nuestra propia vitrina digital construida con tecnologías de última generación. Destaca por su velocidad de carga instantánea, diseño adaptativo impecable, tema oscuro/claro automático y optimización avanzada para destacar en los buscadores de Google.
+       </p>
+       <div class="portfolio-metrics" aria-label="Métricas y características">
+        <div class="metric-chip">
+         <strong class="metric-number">100%</strong>
+         <span class="metric-text">SEO y Rendimiento</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">&lt; 0.6s</strong>
+         <span class="metric-text">Carga Ultrarrápida</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">+100%</strong>
+         <span class="metric-text">Diseño Adaptable</span>
+        </div>
+       </div>
+       <div class="portfolio-tags">
+        <span class="tag-chip">Tecnología de Punta</span>
+        <span class="tag-chip">Carga Ultra Rápida</span>
+        <span class="tag-chip">Listo para Google</span>
+        <span class="tag-chip">Diseño Adaptable</span>
+       </div>
+       <div class="portfolio-actions">
+        <a href="#contacto" class="btn btn-sm btn-primary" aria-label="Cotizar desarrollo web de alta gama como DuyvesTI">
+         <span>Cotizar Proyecto Web</span>
+        </a>
+       </div>
+      </div>
+     </article>
+
+     <!-- Proyecto 2: Sincronización y Traspaso de Datos -->
+     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+      <div class="portfolio-visual">
+       <div class="portfolio-fallback-img" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+         <polyline points="16 18 22 12 16 6"></polyline>
+         <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <span class="portfolio-fallback-label">traspaso_automatico.py</span>
+       </div>
+       <span class="portfolio-badge" style="background: rgba(59, 130, 246, 0.15); color: #3B82F6;">Automatización e Integración</span>
+      </div>
+      <div class="portfolio-content">
+       <h3 class="portfolio-title">Sincronización y Traspaso de Datos</h3>
+       <p class="portfolio-summary">
+        Diseñamos un sistema inteligente que traslada de forma automática miles de tareas, facturas, archivos e historiales de clientes desde software antiguos hacia plataformas modernas en la nube. Ahorró cientos de horas de digitación manual y evitó cualquier pérdida de información crítica.
+       </p>
+       <div class="portfolio-metrics" aria-label="Métricas de impacto">
+        <div class="metric-chip">
+         <strong class="metric-number">+100%</strong>
+         <span class="metric-text">Automático</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">-100s</strong>
+         <span class="metric-text">Horas de Digitación</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">0%</strong>
+         <span class="metric-text">Pérdida de Datos</span>
+        </div>
+       </div>
+       <div class="portfolio-tags">
+        <span class="tag-chip">Conexión de Sistemas</span>
+        <span class="tag-chip">Respaldo Seguro</span>
+        <span class="tag-chip">Ahorro de Tiempo</span>
+        <span class="tag-chip">100% Automático</span>
+       </div>
+       <div class="portfolio-actions">
+        <a href="#contacto" class="btn btn-sm btn-primary" aria-label="Automatizar procesos y migración de datos para mi empresa">
+         <span>Automatizar mi Negocio</span>
+        </a>
+       </div>
+      </div>
+     </article>
+
+     <!-- Proyecto 3: Protector de Datos Confidenciales -->
+     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+      <div class="portfolio-visual">
+       <div class="portfolio-fallback-img" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span class="portfolio-fallback-label">IA &amp; Ley de Datos</span>
+       </div>
+       <span class="portfolio-badge" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">Inteligencia Artificial y Seguridad</span>
+      </div>
+      <div class="portfolio-content">
+       <h3 class="portfolio-title">Protector de Datos Confidenciales</h3>
+       <p class="portfolio-summary">
+        Desarrollamos una herramienta inteligente que "lee" contratos, facturas y PDFs escaneados para detectar y tachar automáticamente datos confidenciales (como nombres, documentos de identidad y firmas). Ideal para garantizar la privacidad y cumplir con la ley de protección de datos en segundos.
+       </p>
+       <div class="portfolio-metrics" aria-label="Métricas de seguridad">
+        <div class="metric-chip">
+         <strong class="metric-number">+100%</strong>
+         <span class="metric-text">Cumplimiento Legal</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">&lt; 1s</strong>
+         <span class="metric-text">Lectura IA</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">100%</strong>
+         <span class="metric-text">Privacidad Total</span>
+        </div>
+       </div>
+       <div class="portfolio-tags">
+        <span class="tag-chip">Lectura Inteligente</span>
+        <span class="tag-chip">Seguridad Legal</span>
+        <span class="tag-chip">Privacidad</span>
+        <span class="tag-chip">Cumplimiento</span>
+       </div>
+       <div class="portfolio-actions">
+        <a href="#contacto" class="btn btn-sm btn-primary" aria-label="Solicitar protección de datos y soluciones con IA">
+         <span>Solicitar Información</span>
+        </a>
+       </div>
+      </div>
+     </article>
+
+     <!-- Tarjeta 4: ¿Quieres hacer crecer tu PyME o Startup? -->
+     <article class="portfolio-card surface-card portfolio-cta-card" role="listitem" tabindex="0">
+      <div class="portfolio-visual">
+       <div class="portfolio-fallback-img" aria-hidden="true">
+        <div class="plus-icon-circle">+</div>
+        <span class="portfolio-fallback-label">Tu Solución Digital</span>
+       </div>
+       <span class="portfolio-badge">Impulsa tu PyME</span>
+      </div>
+      <div class="portfolio-content">
+       <h3 class="portfolio-title">¿Quieres hacer crecer tu PyME o Startup?</h3>
+       <p class="portfolio-summary">
+        Nos apasiona hacerte la vida más fácil. Ya sea creando un sitio web rápido y profesional para tu negocio, una plataforma interactiva para tu startup o ayudándote a automatizar tus tareas diarias, estamos listos para impulsar a nuestra comunidad.
+       </p>
+       <div class="portfolio-metrics" aria-label="Beneficios de trabajar con DuyvesTI">
+        <div class="metric-chip">
+         <strong class="metric-number">bash</strong>
+         <span class="metric-text">Arriendo Mensual</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">100%</strong>
+         <span class="metric-text">Propiedad Tuya</span>
+        </div>
+        <div class="metric-chip">
+         <strong class="metric-number">30d</strong>
+         <span class="metric-text">Garantía Total</span>
+        </div>
+       </div>
+       <div class="portfolio-actions">
+        <a href="#contacto" class="btn btn-sm btn-primary" aria-label="Conversar sobre un proyecto digital para mi negocio">
+         <span>Conversemos del Proyecto ➔</span>
+        </a>
+       </div>
+      </div>
+     </article>
+    </div>
+
+    <!-- Garantía de Alto Rendimiento -->
+    <div class="tech-stack-banner" role="region" aria-label="Garantía de alto rendimiento">
+     <div class="tech-banner-info">
+      <span class="tech-banner-icon" aria-hidden="true">🛡️</span>
+      <div>
+       <h4 class="tech-banner-title">Garantía de Alto Rendimiento</h4>
+       <p class="tech-banner-desc">Construimos tu plataforma con la misma tecnología que sostiene a los líderes globales.</p>
+      </div>
+     </div>
+     <div class="tech-banner-badges" aria-label="Tecnologías líderes">
+      <span class="tech-pill">Netflix</span>
+      <span class="tech-pill">ChatGPT</span>
+      <span class="tech-pill">Claude</span>
+      <span class="tech-pill">Spotify</span>
+      <span class="tech-pill">Twitch</span>
+      <span class="tech-pill">TikTok</span>
+      <span class="tech-pill">Notion</span>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section id="faq" class="content-section" aria-labelledby="faq-heading">
+   <div class="container">
+    <div class="section-header text-center">
+     <span class="section-eyebrow">RESOLVEMOS TUS DUDAS</span>
+     <h2 id="faq-heading" class="section-title">Preguntas Frecuentes y Garantías</h2>
+     <p class="section-subtitle">
+      Transparencia absoluta: propiedad de código, dominios a tu nombre, plazos ágiles y cero letras chicas.
+     </p>
+    </div>
+    <div class="faq-accordion-list" role="region" aria-label="Preguntas Frecuentes sobre el Servicio">
+     <div class="faq-item surface-card" id="faq-item-1">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-1"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-1">
+        <span class="faq-question">¿Realmente soy el dueño de mi sitio web y no pago arriendo?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-1" class="faq-panel" role="region" aria-labelledby="faq-btn-1" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         <strong>Sí, 100% garantizado por contrato.</strong> En DuyvesTI pagas una sola vez y recibes la propiedad legal y técnica absoluta de tu sitio web: código fuente, diseño, bases de datos y contenidos. Nunca te cobraremos mensualidades forzadas de arriendo ni comodatos abusivos: tu web es un activo propio definitivo de tu empresa.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="faq-item surface-card" id="faq-item-2">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-2"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-2">
+        <span class="faq-question">¿A nombre de quién queda registrado el dominio (.cl o .com)?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-2" class="faq-panel" role="region" aria-labelledby="faq-btn-2" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         El dominio se inscribe directamente a nombre de tu empresa o RUT personal en <a href="https://www.nic.cl" target="_blank" rel="noopener noreferrer">NIC Chile</a> (o el registrador internacional de tu preferencia). DuyvesTI se encarga de la configuración técnica de DNS sin costo, pero tú mantienes la titularidad legal y las credenciales maestras en todo momento.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="faq-item surface-card" id="faq-item-3">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-3"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-3">
+        <span class="faq-question">¿Cuánto demoran en entregar mi página web lista para operar?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-3" class="faq-panel" role="region" aria-labelledby="faq-btn-3" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         Una <strong>Landing Page Emprendedora se entrega llave en mano en 3 a 5 días hábiles</strong> (menos de una semana garantizada). El Plan Web PyME Comercial toma entre 7 y 10 días hábiles, y las plataformas a medida entre 15 y 20 días hábiles. Todos los plazos quedan pactados formalmente por escrito.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="faq-item surface-card" id="faq-item-4">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-4"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-4">
+        <span class="faq-question">¿Dónde se aloja la web? ¿Tendré que pagar un hosting costoso todos los meses?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         Nosotros te asesoramos y nos encargamos de toda la configuración técnica para conectar tu dominio y dejar tu sitio operativo en servidores modernos de alta velocidad y seguridad. Así tu empresa mantiene el control directo de sus propios servicios sin cobros de intermediación ni ataduras con nosotros.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="faq-item surface-card" id="faq-item-5">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-5"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-5">
+        <span class="faq-question">¿Qué pasa si necesito hacer cambios después de la entrega o requiero soporte?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-5" class="faq-panel" role="region" aria-labelledby="faq-btn-5" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         Cada proyecto incluye <strong>30 días de garantía técnica integral post-entrega</strong> ante cualquier ajuste, además de una sesión de capacitación de 1 hora por videollamada para que tu equipo pueda actualizar textos, precios e imágenes sin depender de nosotros. Tras la garantía, ofrecemos soporte por requerimiento puntual o bolsas de horas opcionales sin contratos forzosos.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="faq-item surface-card" id="faq-item-6">
+      <h3 class="faq-item-header">
+       <button type="button"
+           id="faq-btn-6"
+           class="faq-trigger"
+           aria-expanded="false"
+           aria-controls="faq-panel-6">
+        <span class="faq-question">¿Cómo recibo las cotizaciones y consultas que ingresen mis clientes?</span>
+        <span class="faq-icon-wrapper" aria-hidden="true">
+         <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+         </svg>
+        </span>
+       </button>
+      </h3>
+      <div id="faq-panel-6" class="faq-panel" role="region" aria-labelledby="faq-btn-6" hidden>
+       <div class="faq-panel-inner">
+        <p>
+         Las consultas generadas en nuestro formulario de contacto o vía WhatsApp llegan inmediatamente a tu correo corporativo con respaldo anti-pérdida. Adicionalmente, el cliente puede contactarte directamente por WhatsApp con un mensaje estructurado que resume el plan y los adicionales cotizados.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section id="contacto" class="content-section" aria-labelledby="contact-heading">
+   <div class="container">
+    <div class="section-header text-center">
+     <span class="section-eyebrow">CONTACTO DIRECTO</span>
+     <h2 id="contact-heading" class="section-title">Hablemos de tu Proyecto</h2>
+     <p class="section-subtitle">
+      Cuéntanos qué necesitas y te responderemos en menos de 2 horas hábiles con una propuesta clara en CLP.
+     </p>
+    </div>
+    <div class="direct-contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 0 auto 2.5rem; max-width: 760px;">
+     <div class="direct-contact-card surface-card text-center" style="padding: 2rem 1.5rem;">
+      <div class="contact-card-icon" style="width: 48px; height: 48px; margin: 0 auto 1rem; border-radius: 12px; background: rgba(255, 106, 19, 0.1); color: var(--accent-orange); display: flex; align-items: center; justify-content: center;" aria-hidden="true">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+       </svg>
+      </div>
+      <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Correo Corporativo</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Escríbenos con tus dudas o adjunta tus requerimientos.</p>
+      <a href="mailto:duyvesti@gmail.com?subject=Consulta%20Proyecto%20Web%20DuyvesTI" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">
+       duyvesti@gmail.com
+      </a>
+     </div>
+     <div class="direct-contact-card surface-card text-center" style="padding: 2rem 1.5rem;">
+      <div class="contact-card-icon" style="width: 48px; height: 48px; margin: 0 auto 1rem; border-radius: 12px; background: rgba(37, 211, 102, 0.12); color: #25D366; display: flex; align-items: center; justify-content: center;" aria-hidden="true">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+       </svg>
+      </div>
+      <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">WhatsApp &amp; Teléfono</h3>
+      <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Atención ágil de lunes a viernes de 09:00 a 19:00 hrs.</p>
+      <a href="https://wa.me/56929750390?text=Hola%20DuyvesTI%2C%20quiero%20conversar%20sobre%20un%20proyecto" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center;">
+       +56 9 2975 0390
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+ </main>
+ <!-- WhatsApp Interactive Conversational Chat Cloud (Gamfire Pattern) -->
+ <div
+  id="whatsapp-chat-cloud"
+  class="whatsapp-chat-cloud"
+  role="dialog"
+  aria-labelledby="wa-chat-agent-name"
+  aria-hidden="true"
+  hidden>
+  <div class="wa-chat-header">
+   <div class="wa-chat-profile">
+    <div class="wa-chat-avatar" aria-hidden="true">
+     <span class="wa-avatar-text">DTI</span>
+     <span class="wa-avatar-badge" title="En línea"></span>
+    </div>
+    <div class="wa-chat-info">
+     <h3 id="wa-chat-agent-name" class="wa-chat-agent-name">DuyvesTI • Asesoría</h3>
+     <p class="wa-chat-status">
+      <span class="wa-status-dot" aria-hidden="true"></span>
+      <span>En línea • Respuesta habitual en minutos</span>
+     </p>
+    </div>
+   </div>
+   <button
+    type="button"
+    id="wa-chat-close-btn"
+    class="wa-chat-close-btn"
+    aria-label="Cerrar ventana de chat de WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+     <line x1="18" y1="6" x2="6" y2="18"></line>
+     <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+   </button>
+  </div>
+
+  <div class="wa-chat-body">
+   <div class="wa-chat-date-pill" aria-hidden="true"><span>Hoy</span></div>
+   
+   <div class="wa-chat-bubble wa-incoming">
+    <div class="wa-bubble-content">
+     <p class="wa-bubble-greeting">¡Hola! 👋 Bienvenido a <strong>DuyvesTI</strong>.</p>
+     <p class="wa-bubble-text">
+      Desarrollamos sitios web y plataformas ultrarrápidas para PyMEs y Startups. Sin mensualidades absurdas: tú eres el dueño absoluto.
+     </p>
+     <p class="wa-bubble-prompt">¿En qué podemos ayudarte hoy?</p>
+     <div class="wa-bubble-meta">
+      <span class="wa-bubble-time" id="wa-bubble-time">Ahora</span>
+      <span class="wa-check-double" aria-label="Mensaje recibido">✓✓</span>
+     </div>
+    </div>
+   </div>
+
+   <!-- Quick Question Chips -->
+   <div class="wa-quick-replies" role="group" aria-label="Preguntas rápidas sugeridas">
+    <button type="button" class="wa-chip" data-msg="¡Hola DuyvesTI! Quiero cotizar una Landing Page para mi negocio ($149.990 CLP).">
+     🚀 Cotizar Landing Page
+    </button>
+    <button type="button" class="wa-chip" data-msg="¡Hola DuyvesTI! Me interesa el Plan Web PyME Comercial ($299.990 CLP).">
+     🏢 Plan Web PyME
+    </button>
+    <button type="button" class="wa-chip" data-msg="¡Hola DuyvesTI! Necesito desarrollar una plataforma o sistema a medida para mi startup.">
+     ⚡ Sistema a Medida / Startup
+    </button>
+    <button type="button" class="wa-chip" data-msg="¡Hola DuyvesTI! Tengo dudas sobre los tiempos de entrega y cómo funciona el pago 50/50.">
+     💬 Consultar tiempos y formas de pago
+    </button>
+   </div>
+  </div>
+
+  <div class="wa-chat-footer">
+   <form id="wa-chat-form" class="wa-chat-form" onsubmit="return false;">
+    <label for="wa-chat-input" class="sr-only">Escribe tu mensaje para WhatsApp</label>
+    <div class="wa-input-wrapper">
+     <input
+      type="text"
+      id="wa-chat-input"
+      class="wa-chat-input"
+      placeholder="Escribe tu consulta aquí..."
+      autocomplete="off"
+      maxlength="500" />
+     <button
+      type="submit"
+      id="wa-chat-send-btn"
+      class="wa-chat-send-btn"
+      aria-label="Enviar mensaje por WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+      </svg>
+     </button>
+    </div>
+   </form>
+   <div class="wa-chat-security-note">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+    <span>Conversación 100% directa y privada</span>
+   </div>
+  </div>
+ </div>
+
+ <a href="https://wa.me/56929750390?text=Hola%20DuyvesTI%2C%20quiero%20cotizar%20un%20sitio%20web%20para%20mi%20negocio"
+  id="whatsapp-fab"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp a DuyvesTI (abre en nueva pestaña)"
+  aria-expanded="false"
+  aria-haspopup="dialog"
+  aria-controls="whatsapp-chat-cloud">
+  <span class="whatsapp-fab-icon" aria-hidden="true">
+   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+   </svg>
+  </span>
+  <span class="whatsapp-fab-badge" aria-hidden="true">1</span>
+  <span class="whatsapp-fab-tooltip" role="tooltip">¿Dudas? Chatea con nosotros</span>
+ </a>
+ <footer id="site-footer" class="site-footer" role="contentinfo">
+  <div class="container footer-container">
+   <div class="footer-brand">
+    <div class="brand-monogram" aria-hidden="true">
+     <span class="monogram-d">D</span><span class="monogram-ti">TI</span>
+    </div>
+    <p class="footer-desc">
+     DuyvesTI — Ingeniería web de alto rendimiento para PyMEs y Startups. Paga una sola vez, sé el dueño total y olvídate de arriendos mensuales.
+    </p>
+   </div>
+   <div class="footer-links-group">
+    <div>
+     <h4 class="footer-col-title">Navegación</h4>
+     <ul class="footer-links-list">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#portafolio">Casos de Éxito</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="footer-col-title">Contacto</h4>
+     <ul class="footer-links-list">
+      <li><a href="mailto:duyvesti@gmail.com">duyvesti@gmail.com</a></li>
+      <li><a href="tel:+56929750390">+56 9 2975 0390</a></li>
+      <li><a href="https://wa.me/56929750390" target="_blank" rel="noopener noreferrer">WhatsApp Oficial</a></li>
+      <li><a href="/privacidad.html">Política de Privacidad</a></li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="container footer-bottom">
+   <p>© 2026 DuyvesTI. Todos los derechos reservados. Santiago, Chile.</p>
+   <p>100% de propiedad garantizada en cada entrega.</p>
+  </div>
+ </footer>
+
+ <!-- Project Quote Modal (WhatsApp & Email Dispatch) -->
+ <div id="quote-modal-backdrop" class="quote-modal-backdrop" hidden aria-hidden="true"></div>
+ <div
+  id="quote-project-modal"
+  class="quote-project-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="qm-title"
+  aria-hidden="true"
+  hidden>
+  <div class="qm-header">
+   <div>
+    <span class="qm-eyebrow">Propuesta sin compromiso</span>
+    <h3 id="qm-title" class="qm-title">Cotizar mi Proyecto</h3>
+    <p class="qm-subtitle">Completa tus datos y elige si prefieres enviarlo por WhatsApp o por Correo.</p>
+   </div>
+   <button type="button" id="quote-modal-close" class="qm-close-btn" aria-label="Cerrar ventana de cotización">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+     <line x1="18" y1="6" x2="6" y2="18"></line>
+     <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+   </button>
+  </div>
+  <div class="qm-body">
+   <div id="quote-modal-error" class="qm-error-banner" role="alert" hidden></div>
+   <form id="quote-modal-form" novalidate>
+    <div class="qm-form-grid">
+     <div class="qm-field">
+      <label for="qm-name" class="qm-label">Tu Nombre <span>*</span></label>
+      <input type="text" id="qm-name" class="qm-input" placeholder="Ej. Juan Pérez" required autocomplete="name" />
+     </div>
+     <div class="qm-field">
+      <label for="qm-company" class="qm-label">Empresa / PyME (Opcional)</label>
+      <input type="text" id="qm-company" class="qm-input" placeholder="Ej. Mi Negocio SpA" autocomplete="organization" />
+     </div>
+     <div class="qm-field">
+      <label for="qm-phone" class="qm-label">Teléfono / WhatsApp <span>*</span></label>
+      <input type="tel" id="qm-phone" class="qm-input" placeholder="+56 9 1234 5678" autocomplete="tel" />
+     </div>
+     <div class="qm-field">
+      <label for="qm-email" class="qm-label">Correo Electrónico <span>*</span></label>
+      <input type="email" id="qm-email" class="qm-input" placeholder="nombre@empresa.cl" autocomplete="email" />
+     </div>
+     <div class="qm-field qm-col-full">
+      <label for="qm-plan" class="qm-label">Plan o Servicio de Interés</label>
+      <select id="qm-plan" class="qm-select">
+       <option value="Plan Landing Emprendedor ($149.990 CLP)">Plan Landing Emprendedor ($149.990 CLP)</option>
+       <option value="Plan Web PyME Comercial ($299.990 CLP)" selected>Plan Web PyME Comercial ($299.990 CLP)</option>
+       <option value="Plan Plataforma Startup / A Medida (Desde $499.990 CLP)">Plan Plataforma Startup / A Medida (Desde $499.990 CLP)</option>
+       <option value="Automatización e Integración de Datos">Automatización e Integración de Datos</option>
+       <option value="Protector de Datos Confidenciales / IA">Protector de Datos Confidenciales / IA</option>
+       <option value="Otro requerimiento / Consulta general">Otro requerimiento / Consulta general</option>
+      </select>
+     </div>
+     <div class="qm-field qm-col-full">
+      <label for="qm-message" class="qm-label">Cuéntanos brevemente sobre tu proyecto</label>
+      <textarea id="qm-message" class="qm-textarea" placeholder="¿A qué se dedica tu negocio y qué te gustaría lograr con tu página o sistema?"></textarea>
+     </div>
+    </div>
+    <div class="qm-actions">
+     <button type="submit" id="quote-send-whatsapp" class="btn-whatsapp-modal btn-whatsapp-modal--primary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span>Enviar Cotización por WhatsApp</span>
+     </button>
+    </div>
+    <div class="qm-alt-channel">
+     <span>¿Prefieres por correo?</span>
+     <button type="button" id="quote-send-email" class="qm-email-link-btn">Enviar a duyvesti@gmail.com</button>
+    </div>
+    <p class="qm-footer-note">🔒 Tus datos son confidenciales. Respuesta en menos de 2 horas hábiles.</p>
+   </form>
+  </div>
+ </div>
+
+ <script src="/src/js/theme.js"></script>
+ <script src="/src/js/nav.js"></script>
+ <script src="/src/js/quoter.js"></script>
+ <script src="/src/js/whatsapp-chat.js"></script>
+ <script src="/src/js/quote-modal.js"></script>
+</body>
+</html>
+

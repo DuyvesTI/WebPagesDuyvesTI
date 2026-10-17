@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240">
+  <defs>
+    <linearGradient id="badgeGradH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2234"/>
+      <stop offset="100%" stop-color="#0E131D"/>
+    </linearGradient>
+    <linearGradient id="orangeGradH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA24C"/>
+      <stop offset="100%" stop-color="#FF6A13"/>
+    </linearGradient>
+    <linearGradient id="borderGradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram Icon -->
+  <rect x="20" y="20" width="200" height="200" rx="57" ry="57"
+        fill="url(#badgeGradH)" stroke="url(#borderGradH)" stroke-width="2.5" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="105" letter-spacing="-4">
+    <text x="58" y="156" fill="url(#orangeGradH)">D</text>
+    <text x="122" y="156" fill="#F1F5F9">TI</text>
+  </g>
+
+  <!-- Typography -->
+  <text x="256" y="132" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="78" letter-spacing="-2" fill="#F1F5F9">DuyvesTI</text>
+  <text x="258" y="178" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="24" letter-spacing="4" fill="#94A3B8">DESARROLLO WEB</text>
+</svg>

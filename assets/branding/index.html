@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DuyvesTI — Kit Oficial de Logos para Instagram & Redes Sociales</title>
+  <style>
+    :root {
+      --bg-canvas: #0A0D14;
+      --bg-surface: #121722;
+      --bg-elevated: #1A2234;
+      --accent-orange: #FF6A13;
+      --accent-orange-hover: #F97316;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-card: rgba(255, 255, 255, 0.12);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header.page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(255, 106, 19, 0.12);
+      border: 1px solid rgba(255, 106, 19, 0.35);
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 span {
+      color: var(--accent-orange);
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Simulator Showcase */
+    .simulator-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .simulator-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .simulator-header h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .toggle-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--bg-canvas);
+      padding: 0.35rem 0.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.4rem 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle.active {
+      background: var(--accent-orange);
+      color: #0F172A;
+      font-weight: 700;
+    }
+
+    .preview-stage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    .preview-box {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-card);
+    }
+
+    .preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .circle-mask-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      display: none;
+      box-shadow: 0 0 0 9999px rgba(10, 13, 20, 0.75);
+      border-radius: 50%;
+      border: 2px dashed rgba(255, 106, 19, 0.8);
+    }
+
+    .preview-box.crop-circular .circle-mask-overlay {
+      display: block;
+    }
+
+    .simulator-explanation {
+      max-width: 480px;
+    }
+
+    .simulator-explanation h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .simulator-explanation ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .simulator-explanation li {
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .check-icon {
+      color: var(--accent-orange);
+      font-weight: 900;
+    }
+
+    /* Grid of Assets */
+    .assets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .asset-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .asset-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 106, 19, 0.45);
+    }
+
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #06080D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .card-thumb.vertical {
+      aspect-ratio: 9 / 16;
+      max-height: 400px;
+    }
+
+    .card-thumb.horizontal {
+      aspect-ratio: 16 / 7;
+    }
+
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-bottom: 1rem;
+    }
+
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--accent-orange);
+      color: #0F172A;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-download:hover {
+      background: var(--accent-orange-hover);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Guidelines Section */
+    .guidelines-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: 1.25rem;
+      padding: 2.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .guidelines-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      font-weight: 800;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .color-swatch {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.75rem;
+      padding: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .swatch-color {
+      width: 36px;
+      height: 36px;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .swatch-info {
+      font-size: 0.8rem;
+    }
+
+    .swatch-hex {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .swatch-name {
+      color: var(--text-secondary);
+      font-size: 0.72rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <div class="badge-top">Recursos Oficiales de Marca</div>
+      <h1>Logo DuyvesTI para <span>Instagram</span></h1>
+      <p class="subtitle">
+        Archivos de alta resolución (1080×1080 px y vectoriales) diseñados con margen de seguridad circular para que tu perfil luzca impecable en cualquier pantalla.
+      </p>
+    </header>
+
+    <!-- Interactive Instagram Simulator -->
+    <section class="simulator-card">
+      <div class="simulator-header">
+        <h2>Simulador de Recorte de Instagram</h2>
+        <div class="toggle-controls">
+          <button id="toggle-circle" class="btn-toggle active" type="button" onclick="setCrop('circular')">
+            Vista Circular (App)
+          </button>
+          <button id="toggle-square" class="btn-toggle" type="button" onclick="setCrop('square')">
+            Cuadrado Original (1080×1080)
+          </button>
+        </div>
+      </div>
+
+      <div class="preview-stage">
+        <div id="sim-box" class="preview-box crop-circular">
+          <img src="/assets/branding/instagram-avatar-monogram-dark.png" alt="Previsualización Avatar DuyvesTI">
+          <div class="circle-mask-overlay"></div>
+        </div>
+
+        <div class="simulator-explanation">
+          <h3>¿Por qué esta versión es la recomendada para perfil?</h3>
+          <ul>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Área segura 100% garantizada:</strong> En Instagram, las fotos de perfil se recortan en círculo. El monograma DTI está centrado con 234px de margen protector.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Legibilidad instantánea en móvil:</strong> En smartphones el avatar mide apenas 110px de diámetro. El monograma con contraste naranja/blanco es reconocible de inmediato.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Profundidad premium:</strong> Fondo canvas con resplandor suave naranja y bisel sutil de cristal.</span>
+            </li>
+          </ul>
+          <a href="/assets/branding/instagram-avatar-monogram-dark.png" download="duyvesti-instagram-avatar.png" class="btn-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Descargar Logo Perfil (1080×1080 PNG)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid of All Assets -->
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">Galería Completa de Formatos</h2>
+    <div class="assets-grid">
+
+      <!-- Asset 1: Avatar Dark -->
+      <article class="asset-card">
+        <div class="card-thumb">
+          <img src="/assets/branding/instagram-avatar-monogram-dark.png" alt="Avatar Monograma Oscuro">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Recomendado Perfil</span>
+          <h3 class="card-title">Avatar Monograma Dark</h3>
+          <p class="card-desc">Fondo oscuro corporativo con resplandor naranja y squircle DTI de alto impacto visual.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-avatar-monogram-dark.png" download class="btn-download">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 2: Avatar Full Logo -->
+      <article class="asset-card">
+        <div class="card-thumb">
+          <img src="/assets/branding/instagram-avatar-full-logo.png" alt="Avatar con Nombre Completo">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Alternativa Perfil</span>
+          <h3 class="card-title">Avatar con Nombre Completo</h3>
+          <p class="card-desc">Monograma DTI acompañado de "DuyvesTI" y "Desarrollo Web" ajustados para entrar en el círculo.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-avatar-full-logo.png" download class="btn-download btn-secondary">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 3: Avatar Light -->
+      <article class="asset-card">
+        <div class="card-thumb" style="background: #F8FAFC;">
+          <img src="/assets/branding/instagram-avatar-monogram-light.png" alt="Avatar Modo Claro">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Modo Claro</span>
+          <h3 class="card-title">Avatar Monograma Light</h3>
+          <p class="card-desc">Ideal para estéticas claras o perfiles donde predomina el fondo blanco.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-avatar-monogram-light.png" download class="btn-download btn-secondary">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 4: Post Feed -->
+      <article class="asset-card">
+        <div class="card-thumb">
+          <img src="/assets/branding/instagram-post-feed.png" alt="Post Cuadrado para el Feed">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Publicación Feed</span>
+          <h3 class="card-title">Post Cuadrado de Lanzamiento</h3>
+          <p class="card-desc">Listo para publicar en el feed: presenta el logo, la propuesta de valor para PyMEs y el sitio web.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-post-feed.png" download class="btn-download">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 5: Story Cover -->
+      <article class="asset-card">
+        <div class="card-thumb vertical">
+          <img src="/assets/branding/instagram-story-cover.png" alt="Portada de Historias y Reels">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Historias & Destacadas</span>
+          <h3 class="card-title">Portada Story / Reel / Destacadas</h3>
+          <p class="card-desc">Formato vertical 9:16 con el logo centrado para fondos de stories o portadas de reels.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1920 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-story-cover.png" download class="btn-download">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 6: Mockup Visual -->
+      <article class="asset-card">
+        <div class="card-thumb">
+          <img src="/assets/branding/instagram-profile-mockup.png" alt="Mockup Perfil Instagram">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Guía Visual</span>
+          <h3 class="card-title">Mockup Perfil Instagram</h3>
+          <p class="card-desc">Muestra exacta de cómo se ve el perfil montado en la interfaz de la aplicación de Instagram.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG HQ</span>
+          </div>
+          <a href="/assets/branding/instagram-profile-mockup.png" download class="btn-download btn-secondary">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 7: Monograma Transparente -->
+      <article class="asset-card">
+        <div class="card-thumb" style="background: repeating-conic-gradient(#1a202c 0% 25%, #111827 0% 50%) 50% / 20px 20px;">
+          <img src="/assets/branding/duyvesti-monogram-transparent.png" alt="Monograma Transparente">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Fondo Transparente</span>
+          <h3 class="card-title">Monograma Transparente (PNG)</h3>
+          <p class="card-desc">Perfecto para usar como sticker en fotos de historias, marcas de agua o diseño en Canva.</p>
+          <div class="card-meta">
+            <span>Resolución: 1080×1080 px</span>
+            <span>PNG Alfa</span>
+          </div>
+          <a href="/assets/branding/duyvesti-monogram-transparent.png" download class="btn-download btn-secondary">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 8: Horizontal Transparente -->
+      <article class="asset-card">
+        <div class="card-thumb horizontal" style="background: repeating-conic-gradient(#1a202c 0% 25%, #111827 0% 50%) 50% / 20px 20px;">
+          <img src="/assets/branding/duyvesti-logo-horizontal-transparent.png" alt="Logo Horizontal Transparente">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Fondo Transparente</span>
+          <h3 class="card-title">Logo Horizontal Completo</h3>
+          <p class="card-desc">Monograma + Nombre + Subtítulo para cabeceras, banners de YouTube o firmas de correo.</p>
+          <div class="card-meta">
+            <span>Resolución: 1920×600 px</span>
+            <span>PNG Alfa</span>
+          </div>
+          <a href="/assets/branding/duyvesti-logo-horizontal-transparent.png" download class="btn-download btn-secondary">Descargar PNG</a>
+        </div>
+      </article>
+
+      <!-- Asset 9: Vector SVG -->
+      <article class="asset-card">
+        <div class="card-thumb">
+          <img src="/assets/branding/instagram-avatar-monogram.svg" alt="Vector SVG">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Vectorial Master</span>
+          <h3 class="card-title">Avatar Monograma SVG</h3>
+          <p class="card-desc">Vector escalable al infinito sin pérdida de resolución para Illustrator, Figma o impresión.</p>
+          <div class="card-meta">
+            <span>Vector SVG</span>
+            <span>Escalable</span>
+          </div>
+          <a href="/assets/branding/instagram-avatar-monogram.svg" download class="btn-download">Descargar SVG</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Guidelines and Color Palette -->
+    <section class="guidelines-box">
+      <h2>Paleta Oficial de Colores para Redes Sociales</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        Utiliza estos códigos hexadecimales al diseñar publicaciones, historias o material corporativo de DuyvesTI:
+      </p>
+
+      <div class="palette-grid">
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: #FF6A13;"></div>
+          <div class="swatch-info">
+            <div class="swatch-hex">#FF6A13</div>
+            <div class="swatch-name">Naranja Principal</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: #FFA24C;"></div>
+          <div class="swatch-info">
+            <div class="swatch-hex">#FFA24C</div>
+            <div class="swatch-name">Naranja Acento / Gradiente</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: #0A0D14;"></div>
+          <div class="swatch-info">
+            <div class="swatch-hex">#0A0D14</div>
+            <div class="swatch-name">Canvas Dark</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: #121722;"></div>
+          <div class="swatch-info">
+            <div class="swatch-hex">#121722</div>
+            <div class="swatch-name">Superficie Slate</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: #F1F5F9;"></div>
+          <div class="swatch-info">
+            <div class="swatch-hex">#F1F5F9</div>
+            <div class="swatch-name">Texto Primario</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      DuyvesTI — Desarrollo Web Profesional para PyMEs y Startups en Chile &copy; 2026
+    </footer>
+  </div>
+
+  <script>
+    function setCrop(mode) {
+      const box = document.getElementById('sim-box');
+      const btnCircle = document.getElementById('toggle-circle');
+      const btnSquare = document.getElementById('toggle-square');
+
+      if (mode === 'circular') {
+        box.classList.add('crop-circular');
+        btnCircle.classList.add('active');
+        btnSquare.classList.remove('active');
+      } else {
+        box.classList.remove('crop-circular');
+        btnSquare.classList.add('active');
+        btnCircle.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>

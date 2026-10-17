@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DuyvesTI - Promo WhatsApp</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    font-family: 'Noto Sans', 'DejaVu Sans', sans-serif;
+    color: #F1F5F9;
+    background: #0A0D14;
+    position: relative;
+  }
+  /* Background glow */
+  .bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(900px 700px at 100% 0%, rgba(255,106,19,0.30), transparent 60%),
+      radial-gradient(800px 800px at 0% 100%, rgba(255,106,19,0.16), transparent 60%),
+      linear-gradient(180deg, #0A0D14 0%, #121722 100%);
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .wrap { position: relative; padding: 80px 80px 70px; height: 100%; display: flex; flex-direction: column; }
+
+  /* Brand */
+  .brand { display: flex; align-items: center; gap: 24px; }
+  .mono {
+    width: 104px; height: 104px; border-radius: 26px;
+    background: #121722; border: 2px solid rgba(255,255,255,0.10);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 46px; letter-spacing: -2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .mono .d { color: #FF6A13; } .mono .ti { color: #FFFFFF; }
+  .brand-name { font-size: 50px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  .brand-sub { font-size: 22px; font-weight: 600; letter-spacing: 5px; color: #94A3B8; margin-top: 8px; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 12px; align-self: flex-start;
+    margin-top: 64px; padding: 12px 26px; border-radius: 999px;
+    background: rgba(255,106,19,0.14); border: 2px solid rgba(255,106,19,0.45);
+    color: #FF9454; font-size: 26px; font-weight: 700; letter-spacing: 1px;
+  }
+  .pill .dot { width: 14px; height: 14px; border-radius: 50%; background: #FF6A13; box-shadow: 0 0 12px #FF6A13; }
+
+  h1 { margin-top: 34px; font-size: 104px; line-height: 1.02; font-weight: 900; letter-spacing: -3px; }
+  h1 .o { color: #FF6A13; }
+  .lead { margin-top: 30px; font-size: 38px; line-height: 1.35; color: #CBD5E1; font-weight: 500; }
+  .lead strong { color: #FFFFFF; }
+
+  /* Plans */
+  .plans { margin-top: 56px; display: flex; flex-direction: column; gap: 22px; }
+  .plan {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 30px 36px; border-radius: 26px;
+    background: rgba(18,23,34,0.85); border: 2px solid rgba(255,255,255,0.09);
+  }
+  .plan.featured { border-color: #FF6A13; background: linear-gradient(90deg, rgba(255,106,19,0.16), rgba(18,23,34,0.9)); position: relative; }
+  .plan.featured .tag {
+    position: absolute; top: -18px; left: 36px;
+    background: linear-gradient(135deg, #FF6A13, #FFA24C); color: #0F172A;
+    font-size: 20px; font-weight: 800; padding: 5px 16px; border-radius: 999px; letter-spacing: 0.5px;
+  }
+  .plan-name { font-size: 36px; font-weight: 800; }
+  .plan-desc { font-size: 24px; color: #94A3B8; margin-top: 6px; }
+  .price { text-align: right; }
+  .price .from { display: block; font-size: 18px; font-weight: 800; color: #FF6A13; letter-spacing: 2px; }
+  .price .amt { font-size: 44px; font-weight: 900; letter-spacing: -1px; white-space: nowrap; }
+  .plan.featured .amt { color: #FF6A13; }
+  .price .clp { font-size: 22px; font-weight: 700; color: #94A3B8; }
+
+  /* Benefits */
+  .benefits { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px 30px; }
+  .b { display: flex; align-items: center; gap: 16px; font-size: 29px; font-weight: 600; color: #E2E8F0; }
+  .check {
+    flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(16,185,129,0.15); color: #34D399;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* CTA */
+  .cta { margin-top: auto; }
+  .cta-title { font-size: 34px; font-weight: 800; text-align: center; color: #FFFFFF; margin-bottom: 22px; }
+  .wa {
+    display: flex; align-items: center; justify-content: center; gap: 22px;
+    padding: 30px; border-radius: 28px; background: #25D366; color: #FFFFFF;
+    box-shadow: 0 14px 40px rgba(37,211,102,0.35);
+  }
+  .wa .num { font-size: 58px; font-weight: 900; letter-spacing: -0.5px; }
+  .contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 26px; font-size: 27px; color: #CBD5E1; font-weight: 600; }
+  .contact-row span b { color: #FF9454; }
+
+  /* ===== LIGHT THEME OVERRIDES ===== */
+  body { background: #F8FAFC; color: #0F172A; }
+  .bg {
+    background:
+      radial-gradient(900px 700px at 100% 0%, rgba(255,106,19,0.16), transparent 60%),
+      radial-gradient(800px 800px at 0% 100%, rgba(255,106,19,0.10), transparent 60%),
+      linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+  }
+  .grid {
+    background-image:
+      linear-gradient(rgba(15,23,42,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,0.045) 1px, transparent 1px);
+  }
+  .mono { background: #121722; border-color: rgba(15,23,42,0.15); box-shadow: 0 10px 24px rgba(15,23,42,0.18); }
+  .brand-name { color: #0F172A; }
+  .brand-sub { color: #475569; }
+  .pill { background: rgba(255,106,19,0.10); border-color: rgba(194,65,12,0.40); color: #C2410C; }
+  h1 { color: #0F172A; }
+  h1 .o { color: #EA580C; }
+  .lead { color: #334155; }
+  .lead strong { color: #0F172A; }
+  .plan { background: #FFFFFF; border-color: rgba(15,23,42,0.10); box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
+  .plan.featured { background: linear-gradient(90deg, rgba(255,106,19,0.10), #FFFFFF); border-color: #FF6A13; box-shadow: 0 10px 28px rgba(255,106,19,0.18); }
+  .plan-name { color: #0F172A; }
+  .plan-desc { color: #475569; }
+  .price .amt { color: #0F172A; }
+  .plan.featured .amt { color: #EA580C; }
+  .price .from { color: #C2410C; }
+  .price .clp { color: #64748B; }
+  .b { color: #1E293B; }
+  .check { background: rgba(5,150,105,0.12); color: #059669; }
+  .cta-title { color: #0F172A; }
+  .contact-row { color: #475569; }
+  .contact-row span b { color: #C2410C; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mono"><span class="d">D</span><span class="ti">TI</span></div>
+      <div>
+        <div class="brand-name">DuyvesTI</div>
+        <div class="brand-sub">DESARROLLO WEB</div>
+      </div>
+    </div>
+
+    <div class="pill"><span class="dot"></span>PARA PYMES, STARTUPS Y EMPRENDEDORES</div>
+
+    <h1>Tu página web,<br><span class="o">100% tuya.</span></h1>
+    <p class="lead">Pagas <strong>una sola vez</strong> y te olvidas de arriendos mensuales. Código a tu nombre, rápida y lista para vender.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <div>
+          <div class="plan-name">Landing Page</div>
+          <div class="plan-desc">Ideal para captar clientes rápido</div>
+        </div>
+        <div class="price"><span class="amt">$149.990</span> <span class="clp">CLP</span></div>
+      </div>
+      <div class="plan featured">
+        <span class="tag">★ MÁS ELEGIDO</span>
+        <div>
+          <div class="plan-name">Web PyME Comercial</div>
+          <div class="plan-desc">Sitio completo + catálogo + Google</div>
+        </div>
+        <div class="price"><span class="amt">$299.990</span> <span class="clp">CLP</span></div>
+      </div>
+      <div class="plan">
+        <div>
+          <div class="plan-name">Plataforma Startup</div>
+          <div class="plan-desc">A medida, tienda y pagos Webpay</div>
+        </div>
+        <div class="price"><span class="from">PRECIO DESDE</span><span class="amt">$499.990</span> <span class="clp">CLP</span></div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pago único, $0 mensual</div>
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Optimizada para Google</div>
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Perfecta en celulares</div>
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Botón de WhatsApp</div>
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Entrega desde 5 días</div>
+      <div class="b"><span class="check"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Diseño a tu medida</div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-title">Cotiza gratis hoy · Respuesta en menos de 2 horas</div>
+      <div class="wa">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="num">+56 9 2975 0390</span>
+      </div>
+      <div class="contact-row">
+        <span>✉ <b>duyvesti@gmail.com</b></span>
+        <span>🌐 <b>duyvesti.vercel.app</b></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "duyvesti-relaunch",
+  "version": "1.0.0",
+  "description": "Plataforma web de DuyvesTI rediseñada y optimizada para PyMEs y Startups con lenguaje claro, cercano y orientado a resultados de negocio.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "NO_PROXY=localhost,127.0.0.1 node tests/runner.js",
+    "test:tier1": "NO_PROXY=localhost,127.0.0.1 node tests/runner.js --tier=1",
+    "test:tier2": "NO_PROXY=localhost,127.0.0.1 node tests/runner.js --tier=2",
+    "test:tier3": "NO_PROXY=localhost,127.0.0.1 node tests/runner.js --tier=3",
+    "test:tier4": "NO_PROXY=localhost,127.0.0.1 node tests/runner.js --tier=4"
+  },
+  "keywords": [
+    "duyvesti",
+    "web-development",
+    "pyme",
+    "startup",
+    "chile",
+    "accessible",
+    "wcag-aa"
+  ],
+  "author": "DuyvesTI <contacto@duyvesti.cl>",
+  "license": "UNLICENSED",
+  "private": true
+}

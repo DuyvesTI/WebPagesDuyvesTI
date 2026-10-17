@@ -1,0 +1,448 @@
+/**
+ * DUYVESTI DESIGN SYSTEM TOKENS & GLOBALS
+ * Compliant with WCAG 2.1 AA Standards (>= 4.5:1 text, >= 3.0:1 UI components)
+ * Zero external dependencies. High performance CSS custom properties.
+ */
+
+/* -------------------------------------------------------------
+ * 1. Base Primitives, Box Sizing & Font Stack
+ * ------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  /* Shared Brand Constants */
+  --brand-orange: #FF6A13;
+  --brand-orange-hover: #F97316;
+  --brand-orange-deep: #C2410C;
+  --brand-navy-canvas: #0A0D14;
+  --brand-navy-surface: #121722;
+  --brand-slate-900: #0F172A;
+
+  /* Focus Indicator Tokens (WCAG 2.4.7 Focus Visible) */
+  --focus-ring-color: #FF6A13;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-shadow: 0 0 0 3px rgba(255, 106, 19, 0.45);
+}
+
+/* -------------------------------------------------------------
+ * 2. Dark Theme Tokens (Default)
+ * ------------------------------------------------------------- */
+:root,
+:root[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+
+  /* Surfaces & Canvas */
+  --bg-canvas: #0A0D14;
+  --bg-surface: #121722;
+  --bg-surface-elevated: #1A2234;
+  --bg-surface-hover: #222B3D;
+  --bg-input: #151C2A;
+  --bg-overlay: rgba(10, 13, 20, 0.85);
+
+  /* Glassmorphism & Translucency */
+  --glass-bg: rgba(18, 23, 34, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-backdrop: blur(16px);
+
+  /* Header & Navigation Surfaces */
+  --header-bg: rgba(10, 13, 20, 0.85);
+  --header-bg-scrolled: rgba(10, 13, 20, 0.95);
+  --hover-bg: rgba(255, 255, 255, 0.06);
+  --active-nav-bg: rgba(255, 106, 19, 0.12);
+  --monogram-bg: rgba(0, 0, 0, 0.45);
+
+  /* Typography / Text Content */
+  --text-primary: #F1F5F9;           /* 17.74:1 on canvas */
+  --text-secondary: #94A3B8;         /* 7.58:1 on canvas */
+  --text-muted: #94A3B8;             /* Safe secondary for hints */
+  --text-accent: #FF7A29;            /* 7.47:1 on canvas (WCAG AA PASS) */
+  --text-inverse: #0F172A;
+
+  /* Brand Accents */
+  --accent-orange: #FF6A13;
+  --accent-orange-hover: #F97316;
+  --accent-orange-dark: #C2410C;
+  --accent-hover: #F97316;
+  --accent-active: #EA580C;
+  --accent-subtle: rgba(255, 106, 19, 0.12);
+  --accent-gradient: linear-gradient(135deg, #FF6A13 0%, #FFA24C 100%);
+  --accent-green: #10B981;
+  --accent-green-dark: #059669;
+
+  /* Pill Badges */
+  --badge-bg: rgba(255, 106, 19, 0.12);
+  --badge-text: #FF9454;
+  --hero-card-bg: rgba(18, 23, 34, 0.90);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-accent: rgba(255, 106, 19, 0.40);
+  --border-hover: rgba(255, 106, 19, 0.35);
+
+  /* Primary CTA Button */
+  --btn-primary-bg: #FF6A13;
+  --btn-primary-text: #0F172A;       /* 6.23:1 PASS AA */
+  --btn-primary-hover-bg: #F97316;
+  --btn-primary-hover-text: #0F172A; /* 6.37:1 PASS AA */
+  --btn-primary-shadow: 0 4px 18px rgba(255, 106, 19, 0.35);
+
+  /* Secondary Button (Ghost/Outline) */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+  --btn-secondary-text: #F1F5F9;
+  --btn-secondary-border: rgba(255, 255, 255, 0.16);
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.10);
+  --btn-secondary-hover-text: #FFFFFF;
+  --btn-secondary-hover-border: rgba(255, 255, 255, 0.28);
+
+  /* Icon Buttons (Theme Switcher & Mobile Hamburger) */
+  --btn-icon-color: #F1F5F9;         /* 17.74:1 PASS AA */
+  --btn-icon-bg: rgba(255, 255, 255, 0.06);
+  --btn-icon-border: rgba(255, 255, 255, 0.10);
+  --btn-icon-hover-bg: rgba(255, 255, 255, 0.12);
+  --btn-icon-hover-color: #FF6A13;
+
+  /* Focus Indicator */
+  --focus-ring: 0 0 0 3px rgba(255, 106, 19, 0.45);
+  --ring-focus: #FF6A13;
+
+  /* Status Tokens */
+  --status-success-bg: rgba(16, 185, 129, 0.12);
+  --status-success-text: #34D399;     /* 9.33:1 PASS AA */
+  --status-success-border: rgba(52, 211, 153, 0.30);
+
+  --status-error-bg: rgba(239, 68, 68, 0.12);
+  --status-error-text: #F87171;       /* 6.48:1 PASS AA */
+  --status-error-border: rgba(248, 113, 113, 0.30);
+
+  --status-warning-bg: rgba(245, 158, 11, 0.12);
+  --status-warning-text: #FBBF24;     /* 10.74:1 PASS AA */
+  --status-warning-border: rgba(251, 191, 36, 0.30);
+
+  --status-info-bg: rgba(59, 130, 246, 0.12);
+  --status-info-text: #60A5FA;        /* 7.05:1 PASS AA */
+  --status-info-border: rgba(96, 165, 250, 0.30);
+
+  /* Elevation Shadows */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
+  --shadow-glow-accent: 0 0 35px rgba(255, 106, 19, 0.25);
+}
+
+/* -------------------------------------------------------------
+ * 3. Light Theme Tokens
+ * ------------------------------------------------------------- */
+:root[data-theme="light"],
+html:not(.dark)[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces & Canvas */
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-hover: #E2E8F0;
+  --bg-input: #FFFFFF;
+  --bg-overlay: rgba(15, 23, 42, 0.60);
+
+  /* Glassmorphism & Translucency */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-backdrop: blur(16px);
+
+  /* Header & Navigation Surfaces */
+  --header-bg: rgba(255, 255, 255, 0.88);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.96);
+  --hover-bg: rgba(15, 23, 42, 0.05);
+  --active-nav-bg: rgba(255, 106, 19, 0.10);
+  --monogram-bg: #121722;
+
+  /* Typography / Text Content */
+  --text-primary: #0F172A;           /* 17.06:1 on canvas, 17.85:1 on surface */
+  --text-secondary: #475569;         /* 7.24:1 on canvas, 7.58:1 on surface */
+  --text-muted: #64748B;             /* 4.54:1 on surface (WCAG AA PASS) */
+  --text-accent: #C2410C;            /* 4.95:1 on canvas, 5.18:1 on surface (WCAG AA PASS) */
+  --text-inverse: #F1F5F9;
+
+  /* Brand Accents */
+  --accent-orange: #FF6A13;
+  --accent-orange-hover: #EA580C;
+  --accent-orange-dark: #C2410C;     /* High contrast: 4.65:1 on #FFFFFF */
+  --accent-hover: #EA580C;
+  --accent-active: #C2410C;
+  --accent-subtle: rgba(255, 106, 19, 0.08);
+  --accent-gradient: linear-gradient(135deg, #C2410C 0%, #FF6A13 100%);
+  --accent-green: #059669;
+  --accent-green-dark: #047857;
+
+  /* Pill Badges */
+  --badge-bg: rgba(255, 106, 19, 0.1);
+  --badge-text: #C2410C;             /* High contrast: 4.65:1 on #FFFFFF */
+  --hero-card-bg: rgba(255, 255, 255, 0.95);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.14);
+  --border-strong: rgba(15, 23, 42, 0.24);
+  --border-accent: rgba(194, 65, 12, 0.35);
+  --border-hover: rgba(194, 65, 12, 0.40);
+
+  /* Primary CTA Button */
+  --btn-primary-bg: #FF6A13;
+  --btn-primary-text: #0F172A;       /* 6.23:1 PASS AA */
+  --btn-primary-hover-bg: #F97316;
+  --btn-primary-hover-text: #0F172A; /* 6.37:1 PASS AA */
+  --btn-primary-shadow: 0 4px 14px rgba(255, 106, 19, 0.28);
+
+  /* Secondary Button (Ghost/Outline) */
+  --btn-secondary-bg: #FFFFFF;
+  --btn-secondary-text: #0F172A;     /* 17.85:1 PASS AA */
+  --btn-secondary-border: rgba(15, 23, 42, 0.18);
+  --btn-secondary-hover-bg: #F1F5F9;
+  --btn-secondary-hover-text: #0F172A;
+  --btn-secondary-hover-border: rgba(15, 23, 42, 0.30);
+
+  /* Icon Buttons (Theme Switcher & Mobile Hamburger) */
+  --btn-icon-color: #0F172A;         /* 17.85:1 on surface, 17.06:1 on canvas (PASS AA) */
+  --btn-icon-bg: rgba(15, 23, 42, 0.05);
+  --btn-icon-border: rgba(15, 23, 42, 0.10);
+  --btn-icon-hover-bg: rgba(15, 23, 42, 0.10);
+  --btn-icon-hover-color: #C2410C;
+
+  /* Focus Indicator */
+  --focus-ring: 0 0 0 3px rgba(194, 65, 12, 0.45);
+  --ring-focus: #EA580C;
+
+  /* Status Tokens */
+  --status-success-bg: rgba(16, 185, 129, 0.10);
+  --status-success-text: #047857;     /* 5.48:1 PASS AA */
+  --status-success-border: rgba(4, 120, 87, 0.30);
+
+  --status-error-bg: rgba(239, 68, 68, 0.08);
+  --status-error-text: #B91C1C;       /* 6.47:1 PASS AA */
+  --status-error-border: rgba(185, 28, 28, 0.30);
+
+  --status-warning-bg: rgba(245, 158, 11, 0.10);
+  --status-warning-text: #92400E;     /* 7.09:1 PASS AA */
+  --status-warning-border: rgba(146, 64, 14, 0.30);
+
+  --status-info-bg: rgba(59, 130, 246, 0.08);
+  --status-info-text: #1D4ED8;        /* 6.70:1 PASS AA */
+  --status-info-border: rgba(29, 78, 216, 0.30);
+
+  /* Elevation Shadows */
+  --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 12px 32px -4px rgba(15, 23, 42, 0.10);
+  --shadow-glow-accent: 0 0 25px rgba(255, 106, 19, 0.15);
+}
+
+/* -------------------------------------------------------------
+ * 4. Document-Level Reset, Typography & Layout
+ * ------------------------------------------------------------- */
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Smooth transition ONLY when theme is manually toggled (anti-flicker on load) */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease !important;
+}
+
+/* Accessible Global Focus Visible Indicator (WCAG 2.4.7) */
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--ring-focus, #FF6A13) !important;
+  outline-offset: var(--focus-ring-offset) !important;
+}
+
+/* Skip-to-Content Bypass Link (WCAG 2.4.1) */
+.skip-to-content {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-orange, #FF6A13);
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  transition: top 0.15s ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* Body Scroll Lock for Modal Drawer */
+body.drawer-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+/* Section Header Shared Utility */
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="light"] .section-eyebrow {
+  color: var(--accent-orange-dark);
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3vw + 0.5rem, 2.6rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 44rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Utilities */
+.text-accent {
+  color: var(--text-accent);
+}
+
+.badge-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background-color: var(--accent-subtle);
+  color: var(--text-accent);
+  border: 1px solid var(--border-accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* -------------------------------------------------------------
+ * 7. Modern Rounded Scrollbars (Modals, Chat, Drawers & Page)
+ * ------------------------------------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb, rgba(148, 163, 184, 0.35)) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 106, 19, 0.7);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-orange, #FF6A13);
+}
+

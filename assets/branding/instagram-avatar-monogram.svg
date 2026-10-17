@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#121722"/>
+      <stop offset="100%" stop-color="#080A10"/>
+    </radialGradient>
+
+    <!-- Warm Ambient Glow -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6A13" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FF6A13" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Squircle Badge Gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#171F2F"/>
+      <stop offset="100%" stop-color="#0E131D"/>
+    </linearGradient>
+
+    <!-- Orange Letter Gradient -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA24C"/>
+      <stop offset="100%" stop-color="#FF6A13"/>
+    </linearGradient>
+
+    <!-- Badge Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#FF6A13" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1080" height="1080" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="540" cy="540" r="420" fill="url(#glowGrad)" />
+
+  <!-- Monogram Box (580x580, corner radius 165) -->
+  <rect x="250" y="250" width="580" height="580" rx="165" ry="165"
+        fill="url(#badgeGrad)" stroke="url(#borderGrad)" stroke-width="4"
+        filter="url(#badgeShadow)" />
+
+  <!-- Monogram Letters -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="300" letter-spacing="-12">
+    <!-- Letter D in Brand Orange Gradient -->
+    <text x="360" y="645" fill="url(#orangeGrad)">D</text>
+    <!-- Letters TI in White -->
+    <text x="548" y="645" fill="#F1F5F9">TI</text>
+  </g>
+</svg>
