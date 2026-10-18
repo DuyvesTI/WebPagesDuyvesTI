@@ -2,7 +2,7 @@
  * src/js/quoter.js - DuyvesTI 3-Step Interactive Quoter & FAQ Controller
  * 
  * Features:
- * - F06: Quoter Step 1 (Project Type: Landing $149.990, Web PyME $299.990, Startup $499.990)
+ * - F06: Quoter Step 1 (Project Type: Landing $149.990, Web PyME $299.990, Startup $399.990)
  * - F07: Quoter Step 2 (Modular Addons: Catálogo, WhatsApp, Multi-idioma, SEO Pro, Blog)
  * - F08: Quoter Step 3 (Summary, 50/50 Split, 'duyvesti:quote-selected' Event Dispatch)
  * - F17: Accessible FAQ Accordion Controller (WAI-ARIA APG pattern)
@@ -25,7 +25,7 @@
     promo: {
       landing: { id: 'landing', name: 'Landing Emprendedor', price: 149990, days: 5 },
       corporate: { id: 'corporate', name: 'Web PyME Comercial', price: 299990, days: 10 },
-      custom: { id: 'custom', name: 'Plataforma Startup', price: 499990, days: 20 }
+      custom: { id: 'custom', name: 'Plataforma Startup', price: 399990, days: 20 }
     }
   };
 

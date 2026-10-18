@@ -104,7 +104,7 @@
       const text = (el.textContent || '') + ' ' + (el.getAttribute('aria-label') || '');
       if (/landing/i.test(text)) return 'Plan Landing Emprendedor ($149.990 CLP)';
       if (/pyme|corporativ/i.test(text)) return 'Plan Web PyME Comercial ($299.990 CLP)';
-      if (/startup|medida|tienda|catálogo/i.test(text)) return 'Plan Plataforma Startup / A Medida (Desde $499.990 CLP)';
+      if (/startup|medida|tienda|catálogo/i.test(text)) return 'Plan Plataforma Startup / A Medida (Desde $399.990 CLP)';
       if (/automatiz/i.test(text)) return 'Automatización e Integración de Datos';
       if (/protecci|ia\b/i.test(text)) return 'Protector de Datos Confidenciales / IA';
       return '';

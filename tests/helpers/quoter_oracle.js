@@ -13,7 +13,7 @@ const PLAN_CATALOG = {
   promo: {
     landing: { id: 'landing', name: 'Landing Emprendedor', price: 149990, days: 5 },
     corporate: { id: 'corporate', name: 'Web PyME', price: 299990, days: 10 },
-    custom: { id: 'custom', name: 'Startup', price: 499990, days: 20 }
+    custom: { id: 'custom', name: 'Startup', price: 399990, days: 20 }
   }
 };
 
