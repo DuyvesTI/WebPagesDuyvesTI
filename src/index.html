@@ -210,7 +210,13 @@
   </div>
  </aside>
  <main id="main-content" tabindex="-1">
-  <header id="inicio" class="hero-section" aria-label="Introducción y propuesta de valor">
+  <canvas id="three-scroll-canvas" class="three-scroll-canvas" aria-hidden="true"></canvas>
+  <header id="inicio" class="hero-section parallax-wrapper" data-parallax-wrapper aria-label="Introducción y propuesta de valor">
+   <div class="parallax-backdrop" aria-hidden="true">
+    <div class="parallax-layer parallax-orb parallax-orb--orange" data-parallax-speed="0.35"></div>
+    <div class="parallax-layer parallax-orb parallax-orb--emerald" data-parallax-speed="0.6"></div>
+    <div class="parallax-layer parallax-grid-pattern" data-parallax-speed="0.2"></div>
+   </div>
    <section id="hero" class="container hero-container max-w-7xl">
     <div class="hero-content">
      <div class="hero-badge-pill" role="status" aria-label="Especialidad">
@@ -293,8 +299,12 @@
       </div>
      </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-     <div class="hero-preview-card">
+    <div class="hero-visual" id="hero-parallax-stage" aria-hidden="true">
+     <div class="hero-floating-chip hero-floating-chip--top parallax-layer" data-depth="1.3" data-parallax-speed="0.45">
+      <span class="floating-chip-dot"></span>
+      <span>Asesoría en Hosting y Dominio a tu Nombre</span>
+     </div>
+     <div class="hero-preview-card parallax-layer" data-depth="0.6" data-parallax-speed="0.2">
       <div class="preview-header">
        <div class="preview-dots">
         <span class="dot dot-red"></span>
@@ -306,6 +316,14 @@
         <span>tu-empresa.cl</span>
        </div>
        <span class="preview-badge-status">100% Propio</span>
+      </div>
+      <div class="hero-showcase-media">
+       <img src="/assets/images/hero-web-showcase.jpg"
+            alt="Plataforma web DuyvesTI multidispositivo de alto rendimiento"
+            width="640"
+            height="360"
+            fetchpriority="high"
+            class="hero-showcase-img" />
       </div>
       <div class="preview-body">
        <div class="metric-row">
@@ -334,10 +352,17 @@
        </div>
       </div>
      </div>
+     <div class="hero-floating-chip hero-floating-chip--bottom parallax-layer" data-depth="1.5" data-parallax-speed="0.65">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>Google PageSpeed 99/100</span>
+     </div>
     </div>
    </section>
   </header>
-  <section id="proceso" class="process-section" aria-labelledby="process-title">
+  <section id="proceso" class="process-section parallax-wrapper" data-parallax-wrapper aria-labelledby="process-title">
+   <div class="parallax-backdrop" aria-hidden="true">
+    <div class="parallax-layer parallax-orb parallax-orb--subtle" data-parallax-speed="0.4"></div>
+   </div>
    <div class="container">
     <div class="section-header text-center">
      <span class="section-eyebrow" role="status">METODOLOGÍA TRANSPARENTE</span>
@@ -349,7 +374,7 @@
      </p>
     </div>
     <div class="process-timeline" role="list" aria-label="Etapas del proceso de desarrollo">
-     <div class="process-card" role="listitem">
+     <div class="process-card reveal-on-scroll" role="listitem">
       <div class="process-card-header">
        <span class="process-number" aria-hidden="true">01</span>
        <span class="process-badge">Descubrimiento</span>
@@ -376,7 +401,7 @@
        </li>
       </ul>
      </div>
-     <div class="process-card" role="listitem">
+     <div class="process-card reveal-on-scroll" role="listitem">
       <div class="process-card-header">
        <span class="process-number" aria-hidden="true">02</span>
        <span class="process-badge">Diseño</span>
@@ -403,7 +428,7 @@
        </li>
       </ul>
      </div>
-     <div class="process-card" role="listitem">
+     <div class="process-card reveal-on-scroll" role="listitem">
       <div class="process-card-header">
        <span class="process-number" aria-hidden="true">03</span>
        <span class="process-badge">Llave en Mano</span>
@@ -430,7 +455,7 @@
        </li>
       </ul>
      </div>
-     <div class="process-card" role="listitem">
+     <div class="process-card reveal-on-scroll" role="listitem">
       <div class="process-card-header">
        <span class="process-number" aria-hidden="true">04</span>
        <span class="process-badge">Lanzamiento</span>
@@ -470,7 +495,10 @@
     </div>
    </div>
   </section>
-  <section id="planes" class="content-section pricing-section" aria-labelledby="pricing-heading">
+  <section id="planes" class="content-section pricing-section parallax-wrapper" data-parallax-wrapper aria-labelledby="pricing-heading">
+   <div class="parallax-backdrop" aria-hidden="true">
+    <div class="parallax-layer parallax-orb parallax-orb--center" data-parallax-speed="0.3"></div>
+   </div>
    <div class="container">
     <div class="section-header text-center">
      <span class="section-eyebrow" role="status">INVERSIÓN CLARA Y DEFINITIVA</span>
@@ -478,7 +506,7 @@
       Planes Transparentes en CLP Sin Letras Chicas
      </h2>
      <p class="section-subtitle">
-      Pagas una sola vez por tu proyecto terminado. Sin contratos forzados, sin mensualidades de arriendo y con 100% de propiedad legal de tu código y dominio.
+      Pagas una sola vez por tu proyecto terminado, sin mensualidades de arriendo y con 100% de propiedad legal de tu código. <strong>Te asesoramos paso a paso para que obtengas tu Hosting y Dominio (.CL o .COM)</strong> directamente a tu nombre.
      </p>
     </div>
     <div class="ownership-guarantee-banner" role="region" aria-label="Garantía de propiedad total">
@@ -662,7 +690,11 @@
     </div>
    </div>
   </section>
-  <section id="portafolio" class="content-section portfolio-section" aria-labelledby="portfolio-heading">
+  <section id="portafolio" class="content-section portfolio-section parallax-wrapper" data-parallax-wrapper aria-labelledby="portfolio-heading">
+   <div class="parallax-backdrop" aria-hidden="true">
+    <div class="parallax-layer parallax-orb parallax-orb--orange-right" data-parallax-speed="0.35"></div>
+    <div class="parallax-layer parallax-orb parallax-orb--emerald-left" data-parallax-speed="0.55"></div>
+   </div>
    <div class="container">
     <div class="section-header text-center">
      <span class="section-eyebrow" role="status">SOLUCIONES INTELIGENTES Y RESULTADOS REALES</span>
@@ -675,16 +707,16 @@
     </div>
     <div class="portfolio-grid" role="list" aria-label="Desarrollos y casos de éxito reales">
      <!-- Proyecto 1: Plataforma Web DuyvesTI -->
-     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+     <article class="portfolio-card surface-card reveal-on-scroll" role="listitem" tabindex="0">
       <div class="portfolio-visual">
-       <div class="portfolio-fallback-img" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-         <line x1="8" y1="21" x2="16" y2="21"></line>
-         <line x1="12" y1="17" x2="12" y2="21"></line>
-        </svg>
-        <span class="portfolio-fallback-label">duyvesti.com</span>
-       </div>
+       <img src="/assets/images/portfolio-web-platform.jpg"
+            alt="Plataforma web corporativa y e-commerce DuyvesTI en monitor curvo y smartphone"
+            width="640"
+            height="360"
+            loading="lazy"
+            class="portfolio-img parallax-layer"
+            data-parallax-speed="0.15" />
+       <div class="portfolio-visual-overlay" aria-hidden="true"></div>
        <span class="portfolio-badge">Desarrollo Web de Alta Gama</span>
       </div>
       <div class="portfolio-content">
@@ -721,16 +753,17 @@
      </article>
 
      <!-- Proyecto 2: Sincronización y Traspaso de Datos -->
-     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+     <article class="portfolio-card surface-card reveal-on-scroll" role="listitem" tabindex="0">
       <div class="portfolio-visual">
-       <div class="portfolio-fallback-img" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-         <polyline points="16 18 22 12 16 6"></polyline>
-         <polyline points="8 6 2 12 8 18"></polyline>
-        </svg>
-        <span class="portfolio-fallback-label">traspaso_automatico.py</span>
-       </div>
-       <span class="portfolio-badge" style="background: rgba(59, 130, 246, 0.15); color: #3B82F6;">Automatización e Integración</span>
+       <img src="/assets/images/portfolio-data-automation.jpg"
+            alt="Sistema de automatización y sincronización inteligente de datos hacia la nube"
+            width="640"
+            height="360"
+            loading="lazy"
+            class="portfolio-img parallax-layer"
+            data-parallax-speed="0.15" />
+       <div class="portfolio-visual-overlay" aria-hidden="true"></div>
+       <span class="portfolio-badge" style="background: rgba(18, 23, 34, 0.85); color: #60A5FA; border-color: rgba(96, 165, 250, 0.4);">Automatización e Integración</span>
       </div>
       <div class="portfolio-content">
        <h3 class="portfolio-title">Sincronización y Traspaso de Datos</h3>
@@ -766,15 +799,17 @@
      </article>
 
      <!-- Proyecto 3: Protector de Datos Confidenciales -->
-     <article class="portfolio-card surface-card" role="listitem" tabindex="0">
+     <article class="portfolio-card surface-card reveal-on-scroll" role="listitem" tabindex="0">
       <div class="portfolio-visual">
-       <div class="portfolio-fallback-img" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-        <span class="portfolio-fallback-label">IA &amp; Ley de Datos</span>
-       </div>
-       <span class="portfolio-badge" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">Inteligencia Artificial y Seguridad</span>
+       <img src="/assets/images/portfolio-ai-security.jpg"
+            alt="Escudo digital con inteligencia artificial para protección de documentos confidenciales"
+            width="640"
+            height="360"
+            loading="lazy"
+            class="portfolio-img parallax-layer"
+            data-parallax-speed="0.15" />
+       <div class="portfolio-visual-overlay" aria-hidden="true"></div>
+       <span class="portfolio-badge" style="background: rgba(18, 23, 34, 0.85); color: #34D399; border-color: rgba(52, 211, 153, 0.4);">Inteligencia Artificial y Seguridad</span>
       </div>
       <div class="portfolio-content">
        <h3 class="portfolio-title">Protector de Datos Confidenciales</h3>
@@ -810,12 +845,16 @@
      </article>
 
      <!-- Tarjeta 4: ¿Quieres hacer crecer tu PyME o Startup? -->
-     <article class="portfolio-card surface-card portfolio-cta-card" role="listitem" tabindex="0">
+     <article class="portfolio-card surface-card portfolio-cta-card reveal-on-scroll" role="listitem" tabindex="0">
       <div class="portfolio-visual">
-       <div class="portfolio-fallback-img" aria-hidden="true">
-        <div class="plus-icon-circle">+</div>
-        <span class="portfolio-fallback-label">Tu Solución Digital</span>
-       </div>
+       <img src="/assets/images/portfolio-pyme-growth.jpg"
+            alt="Crecimiento digital para PyMEs y Startups con métricas en ascenso"
+            width="640"
+            height="360"
+            loading="lazy"
+            class="portfolio-img parallax-layer"
+            data-parallax-speed="0.15" />
+       <div class="portfolio-visual-overlay" aria-hidden="true"></div>
        <span class="portfolio-badge">Impulsa tu PyME</span>
       </div>
       <div class="portfolio-content">
@@ -825,7 +864,7 @@
        </p>
        <div class="portfolio-metrics" aria-label="Beneficios de trabajar con DuyvesTI">
         <div class="metric-chip">
-         <strong class="metric-number">bash</strong>
+         <strong class="metric-number">$0</strong>
          <span class="metric-text">Arriendo Mensual</span>
         </div>
         <div class="metric-chip">
@@ -954,7 +993,7 @@
            class="faq-trigger"
            aria-expanded="false"
            aria-controls="faq-panel-4">
-        <span class="faq-question">¿El valor incluye hosting y dominio por el primer año? ¿Tendré que pagar arriendos mensuales?</span>
+        <span class="faq-question">¿Cómo funciona el hosting y el dominio? ¿Tendré que pagar arriendos mensuales?</span>
         <span class="faq-icon-wrapper" aria-hidden="true">
          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -965,7 +1004,7 @@
       <div id="faq-panel-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4" hidden>
        <div class="faq-panel-inner">
          <p>
-          <strong>¡Sí, totalmente incluido!</strong> Todos nuestros planes incluyen el hosting de alta velocidad y la inscripción de tu dominio (.cl o .com) durante el primer año completo, configurado 100% a nombre de tu empresa. A diferencia de agencias que cobran arriendos mensuales obligatorios, en DuyvesTI tú eres el dueño legal y definitivo de tu sitio ($0 CLP arriendo mensual).
+          El valor del plan cubre el desarrollo completo de tu proyecto sin arriendos mensuales a DuyvesTI ($0 CLP arriendo mensual). Aunque la promoción no incluye el costo de hosting ni dominio, <strong>te asesoramos paso a paso para que los obtengas directamente a nombre de tu empresa</strong> (.cl o .com) y nosotros dejamos todo configurado y funcionando sin costo extra.
          </p>
        </div>
       </div>
@@ -1240,6 +1279,11 @@
   <div class="qm-body">
    <div id="quote-modal-error" class="qm-error-banner" role="alert" hidden></div>
    <form id="quote-modal-form" novalidate>
+    <!-- Honeypot Anti-Bot Trap (Hidden from humans) -->
+    <div class="qm-hp-trap" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
+     <label for="qm-fax-hp">Fax Corporativo (No completar)</label>
+     <input type="text" id="qm-fax-hp" name="organization_fax_hp" tabindex="-1" autocomplete="off" />
+    </div>
     <div class="qm-form-grid">
      <div class="qm-field">
       <label for="qm-name" class="qm-label">Tu Nombre <span>*</span></label>
@@ -1295,6 +1339,9 @@
  <script src="/src/js/quoter.js"></script>
  <script src="/src/js/whatsapp-chat.js"></script>
  <script src="/src/js/quote-modal.js"></script>
+ <script src="/src/js/parallax.js"></script>
+ <script defer src="/src/js/vendor/three.min.js"></script>
+ <script defer src="/src/js/three-effects.js"></script>
 </body>
 </html>
 

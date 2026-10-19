@@ -4,10 +4,35 @@
  * Opens a responsive modal when the user clicks "Cotizar mi Proyecto" (or any quote CTA)
  * allowing them to fill out their contact details, project type, and requirements,
  * and dispatch the inquiry via WhatsApp or Corporate Email (mailto:).
+ *
+ * Security & Anti-Bot Protections (Feature F22):
+ * 1. Hidden Honeypot Field (#qm-fax-hp / organization_fax_hp): Silently intercepts spambots.
+ * 2. Time-Delta Bot Gate (>= 2500ms): Blocks automated instant form-submission scripts.
+ * 3. Submission Cooldown Rate-Limiter: Prevents rapid-fire automated spam dispatches.
+ * 4. Strict Input Sanitization (XSS & SQLi neutralization): Strips HTML tags, scripts,
+ *    event handlers, and SQL injection vectors before building the dispatch payload.
  */
 
 (function (global) {
   'use strict';
+
+  function sanitizeText(input) {
+    if (!input || typeof input !== 'string') return '';
+    return input
+      .replace(/<\s*script[^>]*>[\s\S]*?<\s*\/\s*script\s*>/gi, '')
+      .replace(/<[^>]+>/g, '')
+      .replace(/javascript\s*:/gi, '')
+      .replace(/on\w+\s*=\s*["'][^"']*["']/gi, '')
+      .replace(/(\b(UNION\s+SELECT|DROP\s+TABLE|INSERT\s+INTO|DELETE\s+FROM)\b|--)/gi, '')
+      .trim();
+  }
+
+  function hasMaliciousPayload(input) {
+    if (!input || typeof input !== 'string') return false;
+    return /<\s*script|javascript\s*:|on(error|load|mouseover|focus)\s*=|\b(UNION\s+SELECT|DROP\s+TABLE)\b/i.test(
+      input
+    );
+  }
 
   class QuoteModalController {
     constructor(options = {}) {
@@ -15,6 +40,9 @@
       this.email = options.email || 'duyvesti@gmail.com';
       this.isOpen = false;
       this.previouslyFocused = null;
+      this.openedAt = Date.now();
+      this.lastSubmittedAt = 0;
+      this.minHumanInteractionMs = options.minHumanInteractionMs || 2500;
       this.init();
     }
 
@@ -30,6 +58,7 @@
       this.errorBanner = document.getElementById('quote-modal-error');
 
       // Inputs
+      this.inputHoneypot = document.getElementById('qm-fax-hp');
       this.inputName = document.getElementById('qm-name');
       this.inputCompany = document.getElementById('qm-company');
       this.inputEmail = document.getElementById('qm-email');
@@ -114,6 +143,7 @@
       if (!this.modal) return;
       this.previouslyFocused = document.activeElement;
       this.isOpen = true;
+      this.openedAt = Date.now();
       this.hideError();
 
       if (presetPlan && this.inputPlan) {
@@ -178,19 +208,55 @@
       this.errorBanner.textContent = '';
     }
 
+    /**
+     * Evaluates anti-bot protections (Honeypot, Time-Delta >= 2500ms, Rate-Limit Cooldown)
+     */
+    isBotSubmission(now = Date.now()) {
+      // 1. Honeypot trap check
+      if (this.inputHoneypot && this.inputHoneypot.value && this.inputHoneypot.value.trim().length > 0) {
+        return true;
+      }
+
+      // 2. Time-delta check (< 2500ms from modal open or negative/future clock anomaly)
+      const elapsed = now - this.openedAt;
+      if (elapsed < this.minHumanInteractionMs) {
+        return true;
+      }
+
+      // 3. Rapid-fire rate limit (< 4000ms since last submission)
+      if (this.lastSubmittedAt > 0 && now - this.lastSubmittedAt < 4000) {
+        return true;
+      }
+
+      return false;
+    }
+
     getFormData() {
       return {
-        name: this.inputName ? this.inputName.value.trim() : '',
-        company: this.inputCompany ? this.inputCompany.value.trim() : '',
-        email: this.inputEmail ? this.inputEmail.value.trim() : '',
-        phone: this.inputPhone ? this.inputPhone.value.trim() : '',
-        plan: this.inputPlan ? this.inputPlan.value : 'Plan Web PyME Comercial ($299.990 CLP)',
-        message: this.inputMessage ? this.inputMessage.value.trim() : ''
+        name: sanitizeText(this.inputName ? this.inputName.value : ''),
+        company: sanitizeText(this.inputCompany ? this.inputCompany.value : ''),
+        email: sanitizeText(this.inputEmail ? this.inputEmail.value : ''),
+        phone: sanitizeText(this.inputPhone ? this.inputPhone.value : ''),
+        plan: sanitizeText(this.inputPlan ? this.inputPlan.value : 'Plan Web PyME Comercial ($299.990 CLP)'),
+        message: sanitizeText(this.inputMessage ? this.inputMessage.value : '')
       };
     }
 
     validate(data) {
-      if (!data.name) {
+      const rawInputs = [
+        this.inputName ? this.inputName.value : '',
+        this.inputCompany ? this.inputCompany.value : '',
+        this.inputEmail ? this.inputEmail.value : '',
+        this.inputPhone ? this.inputPhone.value : '',
+        this.inputMessage ? this.inputMessage.value : ''
+      ];
+
+      if (rawInputs.some(hasMaliciousPayload)) {
+        this.showError('Se detectaron caracteres no permitidos en el formulario. Por favor revisa los datos ingresados.');
+        return false;
+      }
+
+      if (!data.name || data.name.length < 2) {
         this.showError('Por favor ingresa tu nombre para poder dirigirnos a ti.');
         if (this.inputName) this.inputName.focus();
         return false;
@@ -198,6 +264,11 @@
       if (!data.email && !data.phone) {
         this.showError('Por favor ingresa tu teléfono o correo electrónico para responderte.');
         if (this.inputPhone) this.inputPhone.focus();
+        return false;
+      }
+      if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        this.showError('Por favor ingresa un correo electrónico válido (ej. nombre@empresa.cl).');
+        if (this.inputEmail) this.inputEmail.focus();
         return false;
       }
       return true;
@@ -219,9 +290,18 @@
     }
 
     handleSend(channel) {
-      const data = this.getFormData();
-      if (!this.validate(data)) return;
+      const now = Date.now();
 
+      // Silent anti-bot interception: close modal cleanly without opening WhatsApp/mailto
+      if (this.isBotSubmission(now)) {
+        this.close();
+        return { blocked: true, isBot: true };
+      }
+
+      const data = this.getFormData();
+      if (!this.validate(data)) return { blocked: true, isBot: false };
+
+      this.lastSubmittedAt = now;
       const bodyText = this.buildMessageText(data);
 
       if (channel === 'whatsapp') {
@@ -239,11 +319,14 @@
       }
 
       this.close();
+      return { blocked: false, isBot: false };
     }
   }
 
   const exported = {
     QuoteModalController,
+    sanitizeText,
+    hasMaliciousPayload,
     initQuoteModal: (opts) => new QuoteModalController(opts)
   };
 
@@ -251,12 +334,14 @@
     module.exports = exported;
   }
 
-  if (typeof window !== 'undefined') {
-    window.duyvestiQuoteModal = exported;
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => exported.initQuoteModal());
-    } else {
-      exported.initQuoteModal();
+  if (typeof global !== 'undefined') {
+    global.DuyvesTIQuoteModal = exported;
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => new QuoteModalController());
+      } else {
+        new QuoteModalController();
+      }
     }
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this);
+})(typeof window !== 'undefined' ? window : globalThis);
