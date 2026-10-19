@@ -1,6 +1,6 @@
 {
   "name": "duyvesti-relaunch",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Plataforma web de DuyvesTI rediseñada y optimizada para PyMEs y Startups con lenguaje claro, cercano y orientado a resultados de negocio.",
   "main": "server.js",
   "type": "commonjs",
