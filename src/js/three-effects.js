@@ -62,9 +62,9 @@
     var sections = [
       { id: 'inicio', num: '01' },
       { id: 'proceso', num: '02' },
-      { id: 'servicios', num: '03' },
-      { id: 'planes', num: '04' },
-      { id: 'portafolio', num: '05' },
+      { id: 'planes', num: '03' },
+      { id: 'portafolio', num: '04' },
+      { id: 'faq', num: '05' },
       { id: 'contacto', num: '06' }
     ];
 
